@@ -1,0 +1,17 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "falafel.js",
+  "dependencies": {
+    "browserify": "^8.1.0",
+    "less": "^2.2.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "prepublish": "browserify jsdares/jsdares-applet-entry.js -o jsdares/jsdares-applet-build.js && lessc jsdares/jsdares-applet-entry.less jsdares/jsdares-applet-build.css"
+  },
+  "author": "",
+  "license": "MIT"
+}

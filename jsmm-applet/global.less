@@ -1,0 +1,253 @@
+@applet-width: 1085px;
+@applet-height: 585px + 20px;
+
+@stepbar-height: 20px;
+
+// declared in Bootstrap
+//@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+//@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+@code-font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+@code-color: #0d0;
+@code-font-size: 14px;
+@code-line-height: 16px;
+
+.code-foreground() {
+	font-family: @code-font-family;
+	color: @code-color;
+	font-size: @code-font-size;
+	line-height: @code-line-height;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+}
+
+.code-inline() {
+	font-family: @code-font-family;
+	font-style: normal;
+	font-weight: bold;
+	background-color: #444;
+	padding: 2px 3px 1px;
+	-webkit-font-smoothing: antialiased;
+}
+
+@editor-background-color: #333;
+@editor-margin-size: 26px;
+@editor-margin-border-color: #444;
+@editor-margin-border-color-error: #a54;
+@editor-margin-border-color-step: #595;
+
+@editor-marking-color: rgba(50, 250, 50, 0.4);
+@editor-marking-color-active: fadein(@editor-marking-color, 20%);
+
+@editor-box-background-color: rgba(10, 10, 10, 0.9);
+@editor-box-color: #0E0;
+@editor-box-value-color: #ee0;
+@editor-box-max-width: 250px;
+
+// @highlight-color: rgba(50, 250, 50, 0.4);
+@highlight-color: hsl(120, 10%, 30%);
+@event-color: rgba(0, 150, 250, 0.25);
+
+@output-padding: 15px;
+@output-background-color: #333;
+@console-auto-scroll-border-color: #444;
+
+@canvas-background-color: #ddd;
+@canvas-max-outer-width: 570px;
+
+@editor-function-call-color: rgba(250, 250, 250, 0.2);
+@editor-function-call-color-hover: rgba(250, 250, 250, 0.4);
+@editor-function-call-color-active: rgba(250, 250, 250, 0.6);
+
+@editor-step-bubble-color: rgba(0, 150, 255, 0.4);
+@editor-step-bubble-color-active: rgba(0, 150, 255, 1);
+
+.hardwareAccel() {
+	-transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+}
+
+.canvas-well() {
+	background-color: @canvas-background-color;
+	@shadow: 0px 2px 5px rgba(0,0,0,0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+	.box-shadow(@shadow);
+	.border-radius(4px);
+	line-height: 0px;
+}
+
+@code-well-background-color: #111;
+.code-well() {
+	background-color: @code-well-background-color;
+	@shadow: 0px 1px 3px rgba(0,0,0,0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+	.box-shadow(@shadow);
+	.border-radius(4px);
+}
+
+.output-badge() {
+	font-weight: normal;
+	background-color: black;
+	.border-radius(10px);
+	font-size: 14px;
+	vertical-align: text-bottom;
+	line-height: 18px;
+	background-color: #111;
+	padding: 3px 8px;
+	color: white;
+	white-space: nowrap;
+
+	.icon {
+		margin-top: 1px;
+	}
+}
+
+.icon-trophy {
+	background-position: -1px 0px;
+	background-image: url("../img/trophy16.png");
+	&.icon-white {
+		background-image: url("../img/trophy16white.png");
+	}
+}
+
+.icon-keyboard {
+	background-position: 0px 0px;
+	background-image: url("../img/keyboard.png");
+	&.icon-white {
+		background-image: url("../img/keyboardwhite.png");
+	}
+}
+
+.icon-mouse {
+	background-position: 0px 0px;
+	background-image: url("../img/mouse.png");
+	&.icon-white {
+		background-image: url("../img/mousewhite.png");
+	}
+}
+
+.icon-twitter {
+	background-position: 0px 0px;
+	background-image: url("../img/glyphicons_392_twitter.png");
+	width: 24px;
+	height: 24px;
+	&.icon-white {
+		background-image: url("../img/glyphicons_392_twitter-white.png");
+	}
+}
+
+.icon-facebook {
+	background-position: 0px 0px;
+	background-image: url("../img/glyphicons_390_facebook.png");
+	width: 24px;
+	height: 24px;
+}
+
+.icon-star-yellow {
+	background-position: 0px -1px;
+	background-image: url("../img/star-yellow.png");
+	width: 16px;
+	height: 16px;
+}
+
+.icon-loader {
+	background-position: 0px 0px;
+	background-image: url("../img/loader.gif");
+	width: 16px;
+	height: 16px;
+
+	&.icon-white {
+		background-image: url("../img/loader-white.gif");
+	}
+}
+
+.icon-ok-sign-color {
+	background-position: 0px 0px;
+	background-image: url("../img/ok.png");
+	width: 16px;
+	height: 16px;
+}
+
+.icon-exclamation-sign-color {
+	background-position: 0px 0px;
+	background-image: url("../img/margin-message-icon-error.png");
+	width: 16px;
+	height: 16px;
+}
+
+.icon-lock-color {
+	background-position: 0px 0px;
+	background-image: url("../img/lock.png");
+	width: 16px;
+	height: 16px;
+}
+
+.border-top-left-radius(@radius) {
+  -webkit-border-top-left-radius: @radius;
+     -moz-border-top-left-radius: @radius;
+          border-top-left-radius: @radius;
+}
+
+.border-top-right-radius(@radius) {
+  -webkit-border-top-right-radius: @radius;
+     -moz-border-top-right-radius: @radius;
+          border-top-right-radius: @radius;
+}
+
+.border-bottom-left-radius(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+     -moz-border-bottom-left-radius: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+.border-bottom-right-radius(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+     -moz-border-bottom-right-radius: @radius;
+          border-bottom-right-radius: @radius;
+}
+
+.transform(@transform) {
+	-webkit-transform: @transform;
+	-moz-transform: @transform;
+	-ms-transform: @transform;
+	-o-transform: @transform;
+	transform: @transform;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+}
+
+button:focus { 
+	outline: none; 
+}
+
+.animation(@name, @time, @timing-function: linear, @count: infinite, @direction: normal) {
+	-animation-name: @name;
+	-animation-duration: @time;
+	-animation-timing-function: @timing-function;
+	-animation-iteration-count: @count;
+	-animation-direction: @direction;
+	-webkit-animation-name: @name;
+	-webkit-animation-duration: @time;
+	-webkit-animation-timing-function: @timing-function;
+	-webkit-animation-iteration-count: @count;
+	-webkit-animation-direction: @direction;
+	-moz-animation-name: @name;
+	-moz-animation-duration: @time;
+	-moz-animation-timing-function: @timing-function;
+	-moz-animation-iteration-count: @count;
+	-moz-animation-direction: @direction;
+	-ms-animation-name: @name;
+	-ms-animation-duration: @time;
+	-ms-animation-timing-function: @timing-function;
+	-ms-animation-iteration-count: @count;
+	-ms-animation-direction: @direction;
+	-o-animation-name: @name;
+	-o-animation-duration: @time;
+	-o-animation-timing-function: @timing-function;
+	-o-animation-iteration-count: @count;
+	-o-animation-direction: @direction;
+}

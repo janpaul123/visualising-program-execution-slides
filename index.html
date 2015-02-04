@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1280, user-scalable=no">
+
+	<title>Visualising Program Execution</title>
+
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="bower_components/deck.js/core/deck.core.css">
+  <link rel="stylesheet" type="text/css" href="layout-master/source/stable/layout-default.css">
+
+	<!-- Theme -->
+  <link href='http://fonts.googleapis.com/css?family=Londrina+Solid|PT+Mono|Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="resources/layout.css">
+	<link rel="stylesheet" href="resources/typography.css">
+
+	<!-- Required Modernizr file -->
+	<script src="bower_components/deck.js/modernizr.custom.js"></script>
+
+  <!-- Required JS files. -->
+  <script src="bower_components/deck.js/jquery.min.js"></script>
+  <script src="bower_components/deck.js/core/deck.core.js"></script>
+  <script src="bower_components/esprima/esprima.js"></script>
+  <script src="falafel.js"></script>
+
+  <script src="bower_components/react/react.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="sparklines.js"></script>
+
+  <script src="layout-master/source/jquery/jquery-ui-1.11.0.js"></script>
+  <script src="layout-master/source/stable/jquery.layout.js"></script>
+  <script src="src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="jsdares/jsdares-applet-build.js"></script>
+  <link rel="stylesheet" href="jsdares/jsdares-applet-build.css">
+
+  <script src="resources/slides.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // wait a little bit until we load
+      // <link rel="stylesheet" href="resources/transition.css">
+      // as the 3d transforms interfere with initialisation logic in jsdares
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'resources/transition.css';
+      document.body.appendChild(link);
+    });
+  </script>
+</head>
+<body>
+
+<div class="deck-container">
+
+<!-- Begin slides. -->
+
+<section class="slide">
+  <img src="resources/theseus.gif" style="position: absolute; bottom: 0px; right: -150px">
+  <img src="resources/whyline.gif" style="position: absolute; bottom: 0px; left: 0px">
+  <img src="resources/zstep.gif" style="position: absolute; top: 0px; left: 0px">
+  <img src="resources/timelapse.gif" style="position: absolute; top: 0px; right: 0px">
+
+  <h1 style="position: relative; margin-top: 180px; text-align: center; color: white; background: rgba(0,0,0,0.8)">Visualising Program Execution</h1>
+
+  <div style="position: absolute; bottom: 120px; left: 0; right: 0; padding: 10px 60px; line-height: 1; color: white; background: rgba(0,0,0,0.8)">
+    <h3 style="display:inline">Jan Paul Posma</h3>.nl
+    <div style="position: absolute; top: 10px; right: 60px">j@npaulpos.ma</div>
+  </div>
+</section>
+
+<section class="slide">
+  <h1 style="position: absolute; top: 50%; left: 0; right: 0; text-align: center; transform: translateY(-50%)">seeing what programs do</h1>
+</section>
+
+<section class="slide">
+  <style>
+    :not(.deck-child-current) > .slide-menu-first-seeing.deck-before {
+      opacity: 1 !important;
+    }
+  </style>
+  <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%)">
+    <div class="slide slide-menu-first-seeing" style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/eye.svg" style="opacity: 0.93; width: 190px; position: absolute; left: 50%; margin-left: -215px; top: -30px;">seeing</div>
+    <div class="slide" style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/sparkline.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -200px; top: 15px;">example</div>
+    <div class="slide" style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/game.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -201px; top: 18px;">advanced</div>
+  </div>
+
+  <div class="slide"></div>
+</section>
+
+<section class="slide">
+  <img style="position: absolute; top: 50%; left: 50%; right: 0; text-align: center; transform: translate(-50%,-50%)" src="resources/google-css.gif">
+</section>
+
+<section class="slide">
+  <style>
+    .slide-spotlight.deck-previous,
+    .slide-spotlight.deck-before {
+      opacity: 1 !important;
+    }
+  </style>
+  <img style="position: absolute; top: 50%; left: 50%; right: 0; text-align: center; transform: translate(-50%,-50%)" src="resources/code.gif">
+
+  <div class="slide slide-spotlight" style="position: absolute; top:0; left:0; right:0; bottom:0; background: #111; transition: opacity 2s"></div>
+
+  <div class="slide slide-spotlight" style="position: absolute; top:0; left:0; right:0; bottom:0; transition: none">
+    <img src="resources/network.gif" style="position: absolute; top: 0; left: 110px">
+    <img src="resources/console.gif" style="position: absolute; top: 0; right: 110px">
+    <img src="resources/debugger.gif" style="position: absolute; top: 336px; left: 250px">
+
+    <canvas id="spotlightCanvas" width="1280" height="720" style="position: relative"></canvas>
+
+    <script>
+      $(document).ready(function() {
+        var context = spotlightCanvas.getContext('2d');
+        context.fillStyle = '#111';
+        context.fillRect(0,0,spotlightCanvas.width,spotlightCanvas.height);
+
+        spotlightCanvas.addEventListener('mousemove', function(event) {
+          var rect = spotlightCanvas.getBoundingClientRect();
+          var mouseX = event.clientX - rect.left;
+          var mouseY = event.clientY - rect.top;
+
+          context.clearRect(0,0,spotlightCanvas.width, spotlightCanvas.height);
+          context.beginPath();
+          context.rect(0,0,spotlightCanvas.width,spotlightCanvas.height);
+          context.arc(mouseX, mouseY, 60, 0, Math.PI*2, true);
+          context.fill();
+        }, false);
+      });
+    </script>
+  </div>
+</section>
+
+<section class="slide">
+  <script>
+    $(document).ready(function() {
+      function isSlideActive($slide) {
+        return $slide.hasClass('deck-current') || $slide.hasClass('deck-previous') || $slide.hasClass('deck-before');
+      }
+
+      var bits = [];
+
+      function bitsToHtml(start, length, showErrors) {
+        var html = '';
+        for (var i=start; i<start+length; i++) {
+          if (!bits[i]) break;
+
+          if (bits[i].error) {
+            if (showErrors) {
+              html += '<span style="color: red">' + bits[i].value + '</span>';
+            } else {
+              html += '<span style="color: green">' + (1-bits[i].value) + '</span>';
+            }
+          } else {
+            html += bits[i].value;
+          }
+        }
+        return html;
+      }
+
+      window.setInterval(function() {
+        var bitsLength = isSlideActive($('.bugs-slide-2')) ? 21 : 5;
+
+        bits.unshift({value: Math.round(Math.random()), error: (Math.floor(Math.random()*6) === 0)});
+        bits.splice(-(bits.length-bitsLength), bits.length-bitsLength);
+
+        bugsNumbersComputer.innerHTML = bitsToHtml(0, 5, true);
+        bugsNumbersHead.innerHTML = bitsToHtml(isSlideActive($('.bugs-slide-2')) ? 5+11 : 0, 5, isSlideActive($('.bugs-slide-2')));
+        bugsNumbersMiddle.innerHTML = bitsToHtml(5, 11, true);
+      }, 100);
+    });
+  </script>
+  <style>
+    .bugs-head, .bugs-middle {
+      opacity: 0;
+    }
+    .bugs-slide-1.deck-current ~ .bugs-computer,
+    .bugs-slide-1.deck-previous ~ .bugs-computer,
+    .bugs-slide-1.deck-before ~ .bugs-computer {
+      margin-left: -350px;
+    }
+    .bugs-slide-1.deck-current ~ .bugs-head,
+    .bugs-slide-1.deck-previous ~ .bugs-head,
+    .bugs-slide-1.deck-before ~ .bugs-head {
+      opacity: 1;
+    }
+    .bugs-slide-2.deck-current ~ .bugs-middle,
+    .bugs-slide-2.deck-previous ~ .bugs-middle,
+    .bugs-slide-2.deck-before ~ .bugs-middle {
+      opacity: 1;
+    }
+  </style>
+
+  <div class="slide bugs-slide-1"></div>
+  <div class="slide bugs-slide-2"></div>
+
+  <div class="bugs-computer" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: margin-left 300ms">
+    <img src="resources/computer.svg" style="width: 450px; opacity: 0.93">
+    <div id="bugsNumbersComputer" style="position: absolute; top: 132px; left: 113px; font-family: 'PT Mono', monospace; width: 185px">01001</div>
+  </div>
+
+  <div class="bugs-head" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: opacity 300ms; margin-left: 350px; margin-top: 47px">
+    <img src="resources/head.svg" style="width: 540px; opacity: 0.93">
+    <div id="bugsNumbersHead" style="position: absolute; top: 130px; left: 165px; font-family: 'PT Mono', monospace; width: 185px">01001</div>
+  </div>
+
+  <div class="bugs-middle" id="bugsNumbersMiddle" style="position: absolute; top: 50%; left: 50%; font-family: 'PT Mono', monospace; margin-left: -225px; margin-top: -106px; transition: opacity 300ms">01001</div>
+</section>
+
+<section class="slide" style="padding: 50px">
+  <style>
+    .slide-console.deck-previous, .slide-console.deck-before, .slide-console.deck-current {
+      transition: top 0.5s, transform 300ms ease-in-out, opacity 300ms ease-in-out !important;
+      opacity: 1 !important;
+    }
+    .slide-console.deck-previous, .slide-console.deck-before {
+      top: 10% !important;
+    }
+    .slide-console-arrow-down {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 28px;
+      height: 58.5px;
+      opacity: 0.33;
+    }
+
+    .slide-console-list-inner-1, .slide-console-list-inner-2, .slide-console-list-inner-3,
+    .slide-console-list-inner-4, .slide-console-list-inner-5, .slide-console-list-inner-6 {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    .slide-console-list {
+      transition: transform 0.5s;
+    }
+
+    .slide-console-slide-1.deck-previous ~ .slide-console-list,
+    .slide-console-slide-1.deck-before ~ .slide-console-list,
+    .slide-console-slide-1.deck-current ~ .slide-console-list {
+      transform: scale(1.7) translate(0px, 210px);
+    }
+    .slide-console-slide-1.deck-previous ~ .slide-console-list .slide-console-list-inner-1,
+    .slide-console-slide-1.deck-before ~ .slide-console-list .slide-console-list-inner-1,
+    .slide-console-slide-1.deck-current ~ .slide-console-list .slide-console-list-inner-1 {
+      opacity: 1;
+    }
+    .slide-console-slide-2.deck-previous ~ .slide-console-list,
+    .slide-console-slide-2.deck-before ~ .slide-console-list,
+    .slide-console-slide-2.deck-current ~ .slide-console-list {
+      transform: scale(1.7) translate(0px, 140px);
+    }
+    .slide-console-slide-2.deck-previous ~ .slide-console-list .slide-console-list-inner-2,
+    .slide-console-slide-2.deck-before ~ .slide-console-list .slide-console-list-inner-2,
+    .slide-console-slide-2.deck-current ~ .slide-console-list .slide-console-list-inner-2 {
+      opacity: 1;
+    }
+    .slide-console-slide-3.deck-previous ~ .slide-console-list,
+    .slide-console-slide-3.deck-before ~ .slide-console-list,
+    .slide-console-slide-3.deck-current ~ .slide-console-list {
+      transform: scale(1.5) translate(0px, 110px);
+    }
+    .slide-console-slide-3.deck-previous ~ .slide-console-list .slide-console-list-inner-3,
+    .slide-console-slide-3.deck-before ~ .slide-console-list .slide-console-list-inner-3,
+    .slide-console-slide-3.deck-current ~ .slide-console-list .slide-console-list-inner-3 {
+      opacity: 1;
+    }
+    .slide-console-slide-4.deck-previous ~ .slide-console-list,
+    .slide-console-slide-4.deck-before ~ .slide-console-list,
+    .slide-console-slide-4.deck-current ~ .slide-console-list {
+      transform: scale(1.3) translate(0px, 50px);
+    }
+    .slide-console-slide-4.deck-previous ~ .slide-console-list .slide-console-list-inner-4,
+    .slide-console-slide-4.deck-before ~ .slide-console-list .slide-console-list-inner-4,
+    .slide-console-slide-4.deck-current ~ .slide-console-list .slide-console-list-inner-4 {
+      opacity: 1;
+    }
+    .slide-console-slide-5.deck-previous ~ .slide-console-list,
+    .slide-console-slide-5.deck-before ~ .slide-console-list,
+    .slide-console-slide-5.deck-current ~ .slide-console-list {
+      transform: scale(1) translate(0px, 0px);
+    }
+    .slide-console-slide-5.deck-previous ~ .slide-console-list .slide-console-list-inner-5,
+    .slide-console-slide-5.deck-before ~ .slide-console-list .slide-console-list-inner-5,
+    .slide-console-slide-5.deck-current ~ .slide-console-list .slide-console-list-inner-5 {
+      opacity: 1;
+    }
+    .slide-console-slide-6.deck-previous ~ .slide-console-list .slide-console-list-inner-6,
+    .slide-console-slide-6.deck-before ~ .slide-console-list .slide-console-list-inner-6,
+    .slide-console-slide-6.deck-current ~ .slide-console-list .slide-console-list-inner-6 {
+      opacity: 1;
+    }
+  </style>
+  <code class="slide slide-console" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: #eee"><b>console.log</b></code>
+
+  <div class="slide slide-console-slide-1"></div>
+  <div class="slide slide-console-slide-2"></div>
+  <div class="slide slide-console-slide-3"></div>
+  <div class="slide slide-console-slide-4"></div>
+  <div class="slide slide-console-slide-5"></div>
+  <div class="slide slide-console-slide-6"></div>
+  <div class="slide-console-list" style="position: relative; margin-top: 80px; text-align: center; line-height: 1.8">
+    <div class="slide-console-list-inner-1">
+      <div>reproduce</div>
+    </div>
+    <div class="slide-console-list-inner-2">
+      <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 118px"></div>
+      <div>hypothesis</div>
+    </div>
+    <div class="slide-console-list-inner-3">
+      <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 238px"></div>
+      <div>instrumentation</div>
+    </div>
+    <div class="slide-console-list-inner-4">
+      <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 351px"></div>
+      <div>trigger error</div>
+    </div>
+    <div class="slide-console-list-inner-5">
+      <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 468px"></div>
+      <div>get clues</div>
+    </div>
+    <div class="slide-console-list-inner-6">
+      <div><img src="resources/arrow-curved-up.png" style="position: absolute; top: 160px; left: 235px; width: 197.5px; height: 373px; opacity: 0.33"></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" style="padding: 50px">
+  <style>
+    .slide-omniscient.deck-previous, .slide-omniscient.deck-before, .slide-omniscient.deck-current {
+      transition: top 0.5s, transform 300ms ease-in-out, opacity 300ms ease-in-out !important;
+      opacity: 1 !important;
+    }
+    .slide-omniscient.deck-previous, .slide-omniscient.deck-before {
+      top: 9% !important;
+    }
+
+    .slide-list-omniscient.deck-previous, .slide-list-omniscient.deck-before, .slide-list-omniscient.deck-current {
+      opacity: 1 !important;
+    }
+
+    .slide-list-omniscient-1,
+    .slide-list-omniscient-3,
+    .slide-list-omniscient-4,
+    .slide-list-omniscient-6 {
+      transition: transform 0.5s ease-in;
+      transform: translateY(0) rotate(0deg);
+    }
+
+    .slide-list-omniscient-slide-1.deck-current ~ .slide-list-omniscient-3,
+    .slide-list-omniscient-slide-1.deck-previous ~ .slide-list-omniscient-3,
+    .slide-list-omniscient-slide-1.deck-before ~ .slide-list-omniscient-3,
+    .slide-list-omniscient-slide-2.deck-current ~ .slide-list-omniscient-4,
+    .slide-list-omniscient-slide-2.deck-previous ~ .slide-list-omniscient-4,
+    .slide-list-omniscient-slide-2.deck-before ~ .slide-list-omniscient-4,
+    .slide-list-omniscient-slide-3.deck-current ~ .slide-list-omniscient-1,
+    .slide-list-omniscient-slide-3.deck-previous ~ .slide-list-omniscient-1,
+    .slide-list-omniscient-slide-3.deck-before ~ .slide-list-omniscient-1 {
+      transform: translateY(1000px) rotate(30deg);
+    }
+  </style>
+  <h1 class="slide slide-omniscient" style="position: absolute; top: 50%; left: 0; right: 0; text-align: center; transform: translateY(-50%)">OMNISCIENT DEBUGGING</h1>
+
+  <div class="slide slide-list-omniscient" style="position: relative; margin-top: 80px; text-align: center; line-height: 1.8">
+    <div class="slide slide-list-omniscient-slide-1"></div>
+    <div class="slide slide-list-omniscient-slide-2"></div>
+    <div class="slide slide-list-omniscient-slide-3"></div>
+
+    <div class="slide-list-omniscient-1">
+      <div>reproduce</div>
+      <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 118px"></div>
+    </div>
+    <div>hypothesis</div>
+    <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 238px"></div>
+    <div class="slide-list-omniscient-3">
+      <div>instrumentation</div>
+    </div>
+    <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 351px"></div>
+    <div class="slide-list-omniscient-4">
+      <div>trigger error</div>
+    </div>
+    <div><img src="resources/arrow-down.png" class="slide-console-arrow-down" style="top: 468px"></div>
+    <div>get clues</div>
+    <div><img src="resources/arrow-curved-up.png" style="opacity: 0.33; position: absolute; top: 160px; left: 235px; width: 197.5px; height: 373px"></div>
+  </div>
+
+  <!-- <div class="slide">IMPLEMENTATION</div> -->
+</section>
+
+<section class="slide">
+  <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%)">
+    <div style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/eye.svg" style="opacity: 0.93; width: 190px; position: absolute; left: 50%; margin-left: -215px; top: -30px;">seeing</div>
+    <div style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/sparkline.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -200px; top: 15px;">example</div>
+    <div style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/game.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -201px; top: 18px;">advanced</div>
+  </div>
+</section>
+
+<section class="slide" style="background: rgb(238,238,238)">
+  <style>
+    .sparkvar-editor {
+      height: 100%;
+    }
+    .ui-layout-pane {
+      padding: 0;
+      border: none;
+    }
+    .ui-layout-resizer {
+      background: #eee;
+      border: none;
+    }
+    .ui-layout-toggler {
+      border: none;
+      width: 100% !important;
+      left: 0 !important;
+      height: 100% !important;
+      top: 0 !important;
+      background: #ddd !important;
+    }
+    .ui-layout-toggler-hover {
+      background: #ccc !important;
+    }
+    .ace_gutter {
+      background: #eee !important;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      var editors = [];
+
+      spakvarPanesOuterLayout = $('.sparkvar-panes-outer').layout({
+        center__paneSelector: ".sparkvar-panes-outer-center",
+        south__paneSelector:   ".sparkvar-panes-outer-south",
+        south__slidable: false,
+        south__initClosed: true,
+        center__size: '50%',
+        south__size: '50%',
+        livePaneResizing: true
+      });
+      spakvarPanesTopLayout = $('.sparkvar-panes-top').layout({
+        center__paneSelector: ".sparkvar-panes-top-center",
+        east__paneSelector:   ".sparkvar-panes-top-east",
+        east__slidable: false,
+        east__initClosed: true,
+        center__size: '50%',
+        east__size: '50%',
+        livePaneResizing: true
+      });
+      spakvarPanesBottomLayout = $('.sparkvar-panes-bottom').layout({
+        center__paneSelector: ".sparkvar-panes-bottom-center",
+        east__paneSelector:   ".sparkvar-panes-bottom-east",
+        east__slidable: false,
+        east__initClosed: true,
+        center__size: '50%',
+        east__size: '50%',
+        livePaneResizing: true
+      });
+
+      function newSparkvarEditor(el) {
+        var editor = ace.edit(el);
+        editors.push(editor);
+        editor.getSession().setMode("ace/mode/javascript");
+        editor.setShowPrintMargin(false);
+        editor.setFontSize(22);
+        return editor;
+      }
+
+      setInterval(function() {
+        for(var i=0;i<editors.length;i++) editors[i].resize(true);
+      }, 1000);
+
+      var topLeftEditor = newSparkvarEditor($('.sparkvar-editor-top-left')[0]);
+      var topRightEditor = newSparkvarEditor($('.sparkvar-editor-top-right')[0]);
+      var bottomLeftEditor = newSparkvarEditor($('.sparkvar-editor-bottom-left')[0]);
+      var bottomRightEditor = newSparkvarEditor($('.sparkvar-editor-bottom-right')[0]);
+      bottomLeftEditor.setReadOnly(true);
+      bottomRightEditor.setReadOnly(true);
+
+      var leftLogString = '';
+      var rightLogString = '';
+
+      topLeftEditor.getSession().setValue("\nvar a=1;\nfor (var i=0; i<8; i+=1) {\n  a *= -2;\n}");
+      topRightEditor.getSession().setValue("renderSparklines([{\n  line: 2,\n  values: [1,-2,4,-8,16,-32,64,-128,256]\n}, {\n  line: 3,\n  values: [0,1,2,3,4,5,6,7]\n}]);");
+
+      function runSparkVars() {
+        var previousLeftLogString = leftLogString;
+        leftLogString = '';
+        rightLogString = '';
+        try {
+          eval(topRightEditor.getSession().getValue());
+          bottomLeftEditor.getSession().setMode("ace/mode/javascript");
+          bottomLeftEditor.getSession().setValue(leftLogString);
+          bottomRightEditor.getSession().setValue(rightLogString);
+          $(bottomLeftEditor.container).css('opacity', 1);
+        } catch(e) {
+          leftLogString = previousLeftLogString;
+          bottomLeftEditor.getSession().setValue(leftLogString + "\n" + 'Error: ' + e);
+          bottomLeftEditor.getSession().setMode(null);
+          $(bottomLeftEditor.container).css('opacity', 0.5);
+        }
+      }
+      topLeftEditor.getSession().on('change', runSparkVars);
+      topLeftEditor.getSession().setUseWrapMode(true);
+      topRightEditor.getSession().on('change', runSparkVars);
+      topRightEditor.getSession().setUseWrapMode(true);
+
+      var _reactContainer = null;
+      function reactContainer() {
+        if (!_reactContainer) {
+          _reactContainer = document.createElement('div');
+          $('.sparkvar-editor-top-left').find('.ace_content')[0].appendChild(_reactContainer);
+        }
+        return _reactContainer;
+      }
+      // Adapted from Ace.VirtualRenderer#textToScreenCoordinates
+      function locToPos(line, column) {
+        var loc = topLeftEditor.getSession().documentToScreenPosition(line-1, column);
+
+        return {
+          left: Math.round(loc.column * topLeftEditor.renderer.layerConfig.characterWidth) + topLeftEditor.renderer.layerConfig.padding,
+          top: (loc.row - topLeftEditor.renderer.layerConfig.firstRowScreen) * topLeftEditor.renderer.layerConfig.lineHeight
+        };
+      }
+
+      addExecutionLimitingToNode = function(node) {
+        if (node.type === 'BlockStatement') {
+          if (node.body[0]) {
+            node.body[0].update("if(__count++>1000){throw 'Execution too long';}\n" + node.body[0].source());
+          }
+        } else if (node.type === 'Program') {
+          var programPrefix = "var __count = 0;\n";
+          node.update(programPrefix + node.source());
+        }
+      };
+
+      // Public API
+      window.getProgram = function() {
+        return topLeftEditor.getSession().getValue();
+      };
+      window.logLeft = function(text) {
+        if (typeof text === 'function') text = "/* function: */\n" + text.toString();
+        else if (typeof text !== 'string') text = JSON.stringify(text, null, 2);
+
+        leftLogString += text + "\n";
+
+        if (spakvarPanesOuterLayout.state.south.isClosed) {
+          spakvarPanesOuterLayout.open('south');
+          topRightEditor.focus();
+        }
+      };
+      window.logRight = function(text) {
+        if (typeof text === 'function') text = "/* function: */\n" + text.toString();
+        else if (typeof text !== 'string') text = JSON.stringify(text, null, 2);
+
+        rightLogString += text + "\n";
+
+        if (spakvarPanesOuterLayout.state.south.isClosed) {
+          spakvarPanesOuterLayout.open('south');
+          topRightEditor.focus();
+        }
+        if (spakvarPanesBottomLayout.state.east.isClosed) {
+          spakvarPanesBottomLayout.open('east');
+          topRightEditor.focus();
+        }
+      };
+      window.renderSparklines = function(log) {
+        var logWithPos = log.map(function(logEntry) {
+          var line = logEntry.line;
+          logEntry.pos = locToPos(line, topLeftEditor.getSession().doc.getLine(line-1).length);
+          return logEntry;
+        });
+        React.render(React.createElement(SparkLines, {log: log, sparkHeight: topLeftEditor.renderer.lineHeight}), reactContainer());
+      };
+
+      window.safeEval = function(code) {
+        eval(falafel(code, addExecutionLimitingToNode).toString());
+      };
+    });
+  </script>
+
+  <div class="sparkvar-panes-outer" style="height: 100%; padding-left: 3px">
+    <div class="sparkvar-panes-outer-center sparkvar-panes-top">
+      <div class="sparkvar-panes-top-center"><div class="sparkvar-editor sparkvar-editor-top-left"></div></div>
+      <div class="sparkvar-panes-top-east"><div class="sparkvar-editor sparkvar-editor-top-right"></div></div>
+    </div>
+    <div class="sparkvar-panes-outer-south sparkvar-panes-bottom">
+      <div class="sparkvar-panes-bottom-center"><div class="sparkvar-editor sparkvar-editor-bottom-left"></div></div>
+      <div class="sparkvar-panes-bottom-east"><div class="sparkvar-editor sparkvar-editor-bottom-right"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div style="position: absolute; bottom: 20px; left: 50%; margin-left: -315px; transform: translateX(-50%); text-align: center; width: 600px">
+    <img src="resources/whyline.gif" style="width: 600px"><br>
+    <h1>Whyline</h1>
+    3X more successful
+  </div>
+
+  <div style="position: absolute; bottom: 20px; left: 50%; margin-left: 315px; transform: translateX(-50%); text-align: center; width: 600px">
+    <img src="resources/reacher.png" style="width: 600px"><br>
+    <h1>Reacher</h1>
+    5X more successful
+  </div>
+</section>
+
+<section class="slide">
+  <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%)">
+    <div style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/eye.svg" style="opacity: 0.93; width: 190px; position: absolute; left: 50%; margin-left: -215px; top: -30px;">seeing</div>
+    <div style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/sparkline.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -200px; top: 15px;">example</div>
+    <div style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/game.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -201px; top: 18px;">advanced</div>
+  </div>
+</section>
+
+<section class="slide" style="padding: 50px">
+  <script>
+    $(document).ready(function() {
+      window.initJsdaresApplet($('.jsdares-game')[0]);
+    });
+  </script>
+  <div class="jsdares">
+    <div class="jsdares-game"></div>
+  </div>
+</section>
+
+<section class="slide">
+  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center">
+    <img src="resources/timelapse.gif"><br>
+    <h1 style="line-height: 1">Timelapse (Webkit)</h1>
+    typical overhead ~0-3%
+  </div>
+</section>
+
+<section class="slide">
+  <style>
+    .list-conclusion-item-1,
+    .list-conclusion-item-2,
+    .list-conclusion-item-3 {
+      opacity: 0.4;
+      transition: opacity 300ms;
+    }
+    .list-conclusion-slide-1.deck-current ~ .list-conclusion-item-1,
+    .list-conclusion-slide-2.deck-current ~ .list-conclusion-item-2,
+    .list-conclusion-slide-3.deck-current ~ .list-conclusion-item-3 {
+      opacity: 1 !important;
+    }
+  </style>
+  <div style="position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%)">
+    <div class="slide list-conclusion-slide-1"></div>
+    <div class="slide list-conclusion-slide-2"></div>
+    <div class="slide list-conclusion-slide-3"></div>
+
+    <div class="list-conclusion-item-1" style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/eye.svg" style="opacity: 0.93; width: 190px; position: absolute; left: 50%; margin-left: -215px; top: -30px;">seeing</div>
+    <div class="list-conclusion-item-2" style="opacity: 0.4; position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/sparkline.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -200px; top: 15px;">example</div>
+    <div class="list-conclusion-item-3" style="position: relative; margin: 50px 0; padding-left: 620px"><img src="resources/game.png" style="opacity: 0.93; width: 145px; position: absolute; left: 50%; margin-left: -201px; top: 18px;">advanced</div>
+  </div>
+</section>
+
+<section class="slide">
+  <script>
+    $(document).ready(function() {
+      setInterval(function() {
+        var now = new Date();
+        $('.final-slide-time').text(now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
+      }, 200);
+    });
+  </script>
+  <div style="position: absolute; left: 50%; top: 50%; text-align: center; transform: translate(-50%,-50%)">
+    <div>janpaulposma.nl/<h3 style="display:inline">forward2</h3></div>
+    <div>j@npaulpos.ma</div>
+  </div>
+  <div class="final-slide-time" style="position: absolute; bottom: 1em; left: 0; right: 0; text-align: center;"></div>
+</section>
+<!-- -->
+
+<!-- End slides. -->
+</div>
+
+</body>
+</html>
+
+<!-- Thomas Le Bas, Tony Gines, Icomatic credit for icons -->

@@ -1,0 +1,37 @@
+/* body */
+html, body {
+  padding: 0;
+  height: 100%;
+  background: #eee;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+.slide .slide {
+  opacity: 0;
+  visibility: visible;
+}
+.deck-child-current .deck-previous, .deck-child-current .deck-before, .deck-child-current .deck-current {
+  opacity: 1;
+}
+
+/* frame */
+.deck-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -640px;
+  margin-top: -360px;
+}
+.deck-container, .deck-container > .slide {
+  padding: 0;
+  width: 1280px;
+  height: 720px;
+  min-height: 0;
+}
+.deck-container .slide {
+  background: none;
+}

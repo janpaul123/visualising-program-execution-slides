@@ -1,0 +1,21 @@
+body .deck-container h1, body .deck-container h2, body .deck-container h3, body .deck-container h4 {
+  font-family: 'Londrina Solid', sans-serif;
+  font-weight: bold;
+  /*font-size: 128px;*/
+}
+
+body .deck-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+
+  line-height: 1.5;
+  font-size: 64px;
+  background: #fff;
+  color: #333;
+}
+
+.slide code {
+  font-family: 'PT Mono', monospace;
+  background: #eee;
+  padding: 0 10px;
+}

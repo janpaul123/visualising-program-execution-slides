@@ -1,0 +1,18 @@
+{
+  "name": "slides",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "deck.js": "~1.1.0",
+    "esprima": "~1.2.2",
+    "react": "~0.12.2",
+    "underscore": "~1.7.0"
+  }
+}

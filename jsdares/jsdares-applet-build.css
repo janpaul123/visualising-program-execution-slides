@@ -1,0 +1,5228 @@
+.jsdares {
+  /* Allow for input prepend/append in search forms */
+  /* White icons with optional class, or on hover/active states of certain elements */
+  /* move down carets for tabs */
+  /* put in bootstrap, forgot btn-warning */
+}
+.jsdares article,
+.jsdares aside,
+.jsdares details,
+.jsdares figcaption,
+.jsdares figure,
+.jsdares footer,
+.jsdares header,
+.jsdares hgroup,
+.jsdares nav,
+.jsdares section {
+  display: block;
+}
+.jsdares audio,
+.jsdares canvas,
+.jsdares video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.jsdares audio:not([controls]) {
+  display: none;
+}
+.jsdares html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+.jsdares a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.jsdares a:hover,
+.jsdares a:active {
+  outline: 0;
+}
+.jsdares sub,
+.jsdares sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+.jsdares sup {
+  top: -0.5em;
+}
+.jsdares sub {
+  bottom: -0.25em;
+}
+.jsdares img {
+  /* Responsive images (ensure images don't scale beyond their parents) */
+  max-width: 100%;
+  /* Part 1: Set a maxium relative to the parent */
+  width: auto\9;
+  /* IE7-8 need help adjusting responsive images */
+  height: auto;
+  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+.jsdares #map_canvas img {
+  max-width: none;
+}
+.jsdares button,
+.jsdares input,
+.jsdares select,
+.jsdares textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+.jsdares button,
+.jsdares input {
+  *overflow: visible;
+  line-height: normal;
+}
+.jsdares button::-moz-focus-inner,
+.jsdares input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.jsdares button,
+.jsdares input[type="button"],
+.jsdares input[type="reset"],
+.jsdares input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+.jsdares input[type="search"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+.jsdares input[type="search"]::-webkit-search-decoration,
+.jsdares input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+.jsdares textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+.jsdares .clearfix {
+  *zoom: 1;
+}
+.jsdares .clearfix:before,
+.jsdares .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .clearfix:after {
+  clear: both;
+}
+.jsdares .hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.jsdares .input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.jsdares body {
+  margin: 0;
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #ffffff;
+}
+.jsdares a {
+  color: #0b95da;
+  text-decoration: none;
+}
+.jsdares a:hover {
+  color: #086391;
+  text-decoration: underline;
+}
+.jsdares .img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.jsdares .img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.jsdares .img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+}
+.jsdares p {
+  margin: 0 0 10.5px;
+}
+.jsdares .lead {
+  margin-bottom: 21px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 31.5px;
+}
+.jsdares small {
+  font-size: 85%;
+}
+.jsdares strong {
+  font-weight: bold;
+}
+.jsdares em {
+  font-style: italic;
+}
+.jsdares cite {
+  font-style: normal;
+}
+.jsdares .muted {
+  color: #999999;
+}
+.jsdares .text-warning {
+  color: #c09853;
+}
+.jsdares .text-error {
+  color: #b94a48;
+}
+.jsdares .text-info {
+  color: #3a87ad;
+}
+.jsdares .text-success {
+  color: #468847;
+}
+.jsdares h1,
+.jsdares h2,
+.jsdares h3,
+.jsdares h4,
+.jsdares h5,
+.jsdares h6 {
+  margin: 10.5px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+.jsdares h1 small,
+.jsdares h2 small,
+.jsdares h3 small,
+.jsdares h4 small,
+.jsdares h5 small,
+.jsdares h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+.jsdares h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+.jsdares h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+.jsdares h3 {
+  font-size: 24px;
+  line-height: 40px;
+}
+.jsdares h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+.jsdares h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+.jsdares h6 {
+  font-size: 12px;
+  line-height: 20px;
+}
+.jsdares h1 small {
+  font-size: 24px;
+}
+.jsdares h2 small {
+  font-size: 18px;
+}
+.jsdares h3 small {
+  font-size: 14px;
+}
+.jsdares h4 small {
+  font-size: 14px;
+}
+.jsdares .page-header {
+  padding-bottom: 9.5px;
+  margin: 21px 0 31.5px;
+  border-bottom: 1px solid #eeeeee;
+}
+.jsdares ul,
+.jsdares ol {
+  padding: 0;
+  margin: 0 0 10.5px 25px;
+}
+.jsdares ul ul,
+.jsdares ul ol,
+.jsdares ol ol,
+.jsdares ol ul {
+  margin-bottom: 0;
+}
+.jsdares li {
+  line-height: 21px;
+}
+.jsdares ul.unstyled,
+.jsdares ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+.jsdares dl {
+  margin-bottom: 21px;
+}
+.jsdares dt,
+.jsdares dd {
+  line-height: 21px;
+}
+.jsdares dt {
+  font-weight: bold;
+}
+.jsdares dd {
+  margin-left: 10.5px;
+}
+.jsdares .dl-horizontal {
+  *zoom: 1;
+}
+.jsdares .dl-horizontal:before,
+.jsdares .dl-horizontal:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .dl-horizontal:after {
+  clear: both;
+}
+.jsdares .dl-horizontal dt {
+  float: left;
+  width: 160px;
+  clear: left;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.jsdares .dl-horizontal dd {
+  margin-left: 180px;
+}
+.jsdares hr {
+  margin: 21px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+.jsdares abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+.jsdares abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.jsdares blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 21px;
+  border-left: 5px solid #eeeeee;
+}
+.jsdares blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26.25px;
+}
+.jsdares blockquote small {
+  display: block;
+  line-height: 21px;
+  color: #999999;
+}
+.jsdares blockquote small:before {
+  content: '\2014 \00A0';
+}
+.jsdares blockquote.pull-right {
+  float: right;
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #eeeeee;
+  border-left: 0;
+}
+.jsdares blockquote.pull-right p,
+.jsdares blockquote.pull-right small {
+  text-align: right;
+}
+.jsdares blockquote.pull-right small:before {
+  content: '';
+}
+.jsdares blockquote.pull-right small:after {
+  content: '\00A0 \2014';
+}
+.jsdares q:before,
+.jsdares q:after,
+.jsdares blockquote:before,
+.jsdares blockquote:after {
+  content: "";
+}
+.jsdares address {
+  display: block;
+  margin-bottom: 21px;
+  font-style: normal;
+  line-height: 21px;
+}
+.jsdares code,
+.jsdares pre {
+  padding: 0 3px 2px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.jsdares code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.jsdares pre {
+  display: block;
+  padding: 10px;
+  margin: 0 0 10.5px;
+  font-size: 13px;
+  line-height: 21px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.jsdares pre.prettyprint {
+  margin-bottom: 21px;
+}
+.jsdares pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+.jsdares .pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+.jsdares form {
+  margin: 0 0 21px;
+}
+.jsdares fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.jsdares legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 21px;
+  font-size: 21px;
+  line-height: 42px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jsdares legend small {
+  font-size: 15.75px;
+  color: #999999;
+}
+.jsdares label,
+.jsdares input,
+.jsdares button,
+.jsdares select,
+.jsdares textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+}
+.jsdares input,
+.jsdares button,
+.jsdares select,
+.jsdares textarea {
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+}
+.jsdares label {
+  display: block;
+  margin-bottom: 5px;
+}
+.jsdares select,
+.jsdares textarea,
+.jsdares input[type="text"],
+.jsdares input[type="password"],
+.jsdares input[type="datetime"],
+.jsdares input[type="datetime-local"],
+.jsdares input[type="date"],
+.jsdares input[type="month"],
+.jsdares input[type="time"],
+.jsdares input[type="week"],
+.jsdares input[type="number"],
+.jsdares input[type="email"],
+.jsdares input[type="url"],
+.jsdares input[type="search"],
+.jsdares input[type="tel"],
+.jsdares input[type="color"],
+.jsdares .uneditable-input {
+  display: inline-block;
+  height: 21px;
+  padding: 4px 6px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #555555;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.jsdares input,
+.jsdares textarea,
+.jsdares .uneditable-input {
+  width: 206px;
+}
+.jsdares textarea {
+  height: auto;
+}
+.jsdares textarea,
+.jsdares input[type="text"],
+.jsdares input[type="password"],
+.jsdares input[type="datetime"],
+.jsdares input[type="datetime-local"],
+.jsdares input[type="date"],
+.jsdares input[type="month"],
+.jsdares input[type="time"],
+.jsdares input[type="week"],
+.jsdares input[type="number"],
+.jsdares input[type="email"],
+.jsdares input[type="url"],
+.jsdares input[type="search"],
+.jsdares input[type="tel"],
+.jsdares input[type="color"],
+.jsdares .uneditable-input {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+}
+.jsdares textarea:focus,
+.jsdares input[type="text"]:focus,
+.jsdares input[type="password"]:focus,
+.jsdares input[type="datetime"]:focus,
+.jsdares input[type="datetime-local"]:focus,
+.jsdares input[type="date"]:focus,
+.jsdares input[type="month"]:focus,
+.jsdares input[type="time"]:focus,
+.jsdares input[type="week"]:focus,
+.jsdares input[type="number"]:focus,
+.jsdares input[type="email"]:focus,
+.jsdares input[type="url"]:focus,
+.jsdares input[type="search"]:focus,
+.jsdares input[type="tel"]:focus,
+.jsdares input[type="color"]:focus,
+.jsdares .uneditable-input:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.jsdares input[type="radio"],
+.jsdares input[type="checkbox"] {
+  margin: 4px 0 0;
+  *margin-top: 0;
+  /* IE7 */
+  margin-top: 1px \9;
+  /* IE8-9 */
+  line-height: normal;
+  cursor: pointer;
+}
+.jsdares input[type="file"],
+.jsdares input[type="image"],
+.jsdares input[type="submit"],
+.jsdares input[type="reset"],
+.jsdares input[type="button"],
+.jsdares input[type="radio"],
+.jsdares input[type="checkbox"] {
+  width: auto;
+}
+.jsdares select,
+.jsdares input[type="file"] {
+  height: 30px;
+  /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  *margin-top: 4px;
+  /* For IE7, add top margin to align select with labels */
+  line-height: 30px;
+}
+.jsdares select {
+  width: 220px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+.jsdares select[multiple],
+.jsdares select[size] {
+  height: auto;
+}
+.jsdares select:focus,
+.jsdares input[type="file"]:focus,
+.jsdares input[type="radio"]:focus,
+.jsdares input[type="checkbox"]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.jsdares .uneditable-input,
+.jsdares .uneditable-textarea {
+  color: #999999;
+  background-color: #fcfcfc;
+  border-color: #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
+  cursor: not-allowed;
+}
+.jsdares .uneditable-input {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.jsdares .uneditable-textarea {
+  width: auto;
+  height: auto;
+}
+.jsdares input:-moz-placeholder,
+.jsdares textarea:-moz-placeholder {
+  color: #999999;
+}
+.jsdares input:-ms-input-placeholder,
+.jsdares textarea:-ms-input-placeholder {
+  color: #999999;
+}
+.jsdares input::-webkit-input-placeholder,
+.jsdares textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+.jsdares .radio,
+.jsdares .checkbox {
+  min-height: 18px;
+  padding-left: 18px;
+}
+.jsdares .radio input[type="radio"],
+.jsdares .checkbox input[type="checkbox"] {
+  float: left;
+  margin-left: -18px;
+}
+.jsdares .controls > .radio:first-child,
+.jsdares .controls > .checkbox:first-child {
+  padding-top: 5px;
+}
+.jsdares .radio.inline,
+.jsdares .checkbox.inline {
+  display: inline-block;
+  padding-top: 5px;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.jsdares .radio.inline + .radio.inline,
+.jsdares .checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+.jsdares .input-mini {
+  width: 60px;
+}
+.jsdares .input-small {
+  width: 90px;
+}
+.jsdares .input-medium {
+  width: 150px;
+}
+.jsdares .input-large {
+  width: 210px;
+}
+.jsdares .input-xlarge {
+  width: 270px;
+}
+.jsdares .input-xxlarge {
+  width: 530px;
+}
+.jsdares input[class*="span"],
+.jsdares select[class*="span"],
+.jsdares textarea[class*="span"],
+.jsdares .uneditable-input[class*="span"],
+.jsdares .row-fluid input[class*="span"],
+.jsdares .row-fluid select[class*="span"],
+.jsdares .row-fluid textarea[class*="span"],
+.jsdares .row-fluid .uneditable-input[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+.jsdares .input-append input[class*="span"],
+.jsdares .input-append .uneditable-input[class*="span"],
+.jsdares .input-prepend input[class*="span"],
+.jsdares .input-prepend .uneditable-input[class*="span"],
+.jsdares .row-fluid input[class*="span"],
+.jsdares .row-fluid select[class*="span"],
+.jsdares .row-fluid textarea[class*="span"],
+.jsdares .row-fluid .uneditable-input[class*="span"],
+.jsdares .row-fluid .input-prepend [class*="span"],
+.jsdares .row-fluid .input-append [class*="span"] {
+  display: inline-block;
+}
+.jsdares input[disabled],
+.jsdares select[disabled],
+.jsdares textarea[disabled],
+.jsdares input[readonly],
+.jsdares select[readonly],
+.jsdares textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+.jsdares input[type="radio"][disabled],
+.jsdares input[type="checkbox"][disabled],
+.jsdares input[type="radio"][readonly],
+.jsdares input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
+.jsdares .control-group.warning > label,
+.jsdares .control-group.warning .help-block,
+.jsdares .control-group.warning .help-inline {
+  color: #c09853;
+}
+.jsdares .control-group.warning .checkbox,
+.jsdares .control-group.warning .radio,
+.jsdares .control-group.warning input,
+.jsdares .control-group.warning select,
+.jsdares .control-group.warning textarea {
+  color: #c09853;
+}
+.jsdares .control-group.warning input,
+.jsdares .control-group.warning select,
+.jsdares .control-group.warning textarea {
+  border-color: #c09853;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.jsdares .control-group.warning input:focus,
+.jsdares .control-group.warning select:focus,
+.jsdares .control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #dbc59e;
+}
+.jsdares .control-group.warning .input-prepend .add-on,
+.jsdares .control-group.warning .input-append .add-on {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+.jsdares .control-group.error > label,
+.jsdares .control-group.error .help-block,
+.jsdares .control-group.error .help-inline {
+  color: #b94a48;
+}
+.jsdares .control-group.error .checkbox,
+.jsdares .control-group.error .radio,
+.jsdares .control-group.error input,
+.jsdares .control-group.error select,
+.jsdares .control-group.error textarea {
+  color: #b94a48;
+}
+.jsdares .control-group.error input,
+.jsdares .control-group.error select,
+.jsdares .control-group.error textarea {
+  border-color: #b94a48;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.jsdares .control-group.error input:focus,
+.jsdares .control-group.error select:focus,
+.jsdares .control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392;
+}
+.jsdares .control-group.error .input-prepend .add-on,
+.jsdares .control-group.error .input-append .add-on {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #b94a48;
+}
+.jsdares .control-group.success > label,
+.jsdares .control-group.success .help-block,
+.jsdares .control-group.success .help-inline {
+  color: #468847;
+}
+.jsdares .control-group.success .checkbox,
+.jsdares .control-group.success .radio,
+.jsdares .control-group.success input,
+.jsdares .control-group.success select,
+.jsdares .control-group.success textarea {
+  color: #468847;
+}
+.jsdares .control-group.success input,
+.jsdares .control-group.success select,
+.jsdares .control-group.success textarea {
+  border-color: #468847;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.jsdares .control-group.success input:focus,
+.jsdares .control-group.success select:focus,
+.jsdares .control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7aba7b;
+}
+.jsdares .control-group.success .input-prepend .add-on,
+.jsdares .control-group.success .input-append .add-on {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #468847;
+}
+.jsdares .control-group.info > label,
+.jsdares .control-group.info .help-block,
+.jsdares .control-group.info .help-inline {
+  color: #3a87ad;
+}
+.jsdares .control-group.info .checkbox,
+.jsdares .control-group.info .radio,
+.jsdares .control-group.info input,
+.jsdares .control-group.info select,
+.jsdares .control-group.info textarea {
+  color: #3a87ad;
+}
+.jsdares .control-group.info input,
+.jsdares .control-group.info select,
+.jsdares .control-group.info textarea {
+  border-color: #3a87ad;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.jsdares .control-group.info input:focus,
+.jsdares .control-group.info select:focus,
+.jsdares .control-group.info textarea:focus {
+  border-color: #2d6987;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7ab5d3;
+}
+.jsdares .control-group.info .input-prepend .add-on,
+.jsdares .control-group.info .input-append .add-on {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #3a87ad;
+}
+.jsdares input:focus:required:invalid,
+.jsdares textarea:focus:required:invalid,
+.jsdares select:focus:required:invalid {
+  color: #b94a48;
+  border-color: #ee5f5b;
+}
+.jsdares input:focus:required:invalid:focus,
+.jsdares textarea:focus:required:invalid:focus,
+.jsdares select:focus:required:invalid:focus {
+  border-color: #e9322d;
+  -webkit-box-shadow: 0 0 6px #f8b9b7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #f8b9b7;
+}
+.jsdares .form-actions {
+  padding: 20px 20px 21px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  *zoom: 1;
+}
+.jsdares .form-actions:before,
+.jsdares .form-actions:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .form-actions:after {
+  clear: both;
+}
+.jsdares .help-block,
+.jsdares .help-inline {
+  color: #595959;
+}
+.jsdares .help-block {
+  display: block;
+  margin-bottom: 10.5px;
+}
+.jsdares .help-inline {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.jsdares .input-append,
+.jsdares .input-prepend {
+  margin-bottom: 5px;
+  font-size: 0;
+  white-space: nowrap;
+}
+.jsdares .input-append input,
+.jsdares .input-prepend input,
+.jsdares .input-append select,
+.jsdares .input-prepend select,
+.jsdares .input-append .uneditable-input,
+.jsdares .input-prepend .uneditable-input {
+  position: relative;
+  margin-bottom: 0;
+  *margin-left: 0;
+  font-size: 14px;
+  vertical-align: top;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.jsdares .input-append input:focus,
+.jsdares .input-prepend input:focus,
+.jsdares .input-append select:focus,
+.jsdares .input-prepend select:focus,
+.jsdares .input-append .uneditable-input:focus,
+.jsdares .input-prepend .uneditable-input:focus {
+  z-index: 2;
+}
+.jsdares .input-append .add-on,
+.jsdares .input-prepend .add-on {
+  display: inline-block;
+  width: auto;
+  height: 21px;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  text-align: center;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+.jsdares .input-append .add-on,
+.jsdares .input-prepend .add-on,
+.jsdares .input-append .btn,
+.jsdares .input-prepend .btn {
+  vertical-align: top;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .input-append .active,
+.jsdares .input-prepend .active {
+  background-color: #8fe87d;
+  border-color: #36ad1f;
+}
+.jsdares .input-prepend .add-on,
+.jsdares .input-prepend .btn {
+  margin-right: -1px;
+}
+.jsdares .input-prepend .add-on:first-child,
+.jsdares .input-prepend .btn:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.jsdares .input-append input,
+.jsdares .input-append select,
+.jsdares .input-append .uneditable-input {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.jsdares .input-append .add-on,
+.jsdares .input-append .btn {
+  margin-left: -1px;
+}
+.jsdares .input-append .add-on:last-child,
+.jsdares .input-append .btn:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.jsdares .input-prepend.input-append input,
+.jsdares .input-prepend.input-append select,
+.jsdares .input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .input-prepend.input-append .add-on:first-child,
+.jsdares .input-prepend.input-append .btn:first-child {
+  margin-right: -1px;
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+.jsdares .input-prepend.input-append .add-on:last-child,
+.jsdares .input-prepend.input-append .btn:last-child {
+  margin-left: -1px;
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+.jsdares input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.jsdares .form-search .input-append .search-query,
+.jsdares .form-search .input-prepend .search-query {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .form-search .input-append .search-query {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+.jsdares .form-search .input-append .btn {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+.jsdares .form-search .input-prepend .search-query {
+  -webkit-border-radius: 0 14px 14px 0;
+  -moz-border-radius: 0 14px 14px 0;
+  border-radius: 0 14px 14px 0;
+}
+.jsdares .form-search .input-prepend .btn {
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  border-radius: 14px 0 0 14px;
+}
+.jsdares .form-search input,
+.jsdares .form-inline input,
+.jsdares .form-horizontal input,
+.jsdares .form-search textarea,
+.jsdares .form-inline textarea,
+.jsdares .form-horizontal textarea,
+.jsdares .form-search select,
+.jsdares .form-inline select,
+.jsdares .form-horizontal select,
+.jsdares .form-search .help-inline,
+.jsdares .form-inline .help-inline,
+.jsdares .form-horizontal .help-inline,
+.jsdares .form-search .uneditable-input,
+.jsdares .form-inline .uneditable-input,
+.jsdares .form-horizontal .uneditable-input,
+.jsdares .form-search .input-prepend,
+.jsdares .form-inline .input-prepend,
+.jsdares .form-horizontal .input-prepend,
+.jsdares .form-search .input-append,
+.jsdares .form-inline .input-append,
+.jsdares .form-horizontal .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.jsdares .form-search .hide,
+.jsdares .form-inline .hide,
+.jsdares .form-horizontal .hide {
+  display: none;
+}
+.jsdares .form-search label,
+.jsdares .form-inline label,
+.jsdares .form-search .btn-group,
+.jsdares .form-inline .btn-group {
+  display: inline-block;
+}
+.jsdares .form-search .input-append,
+.jsdares .form-inline .input-append,
+.jsdares .form-search .input-prepend,
+.jsdares .form-inline .input-prepend {
+  margin-bottom: 0;
+}
+.jsdares .form-search .radio,
+.jsdares .form-search .checkbox,
+.jsdares .form-inline .radio,
+.jsdares .form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+.jsdares .form-search .radio input[type="radio"],
+.jsdares .form-search .checkbox input[type="checkbox"],
+.jsdares .form-inline .radio input[type="radio"],
+.jsdares .form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+.jsdares .control-group {
+  margin-bottom: 10.5px;
+}
+.jsdares legend + .control-group {
+  margin-top: 21px;
+  -webkit-margin-top-collapse: separate;
+}
+.jsdares .form-horizontal .control-group {
+  margin-bottom: 21px;
+  *zoom: 1;
+}
+.jsdares .form-horizontal .control-group:before,
+.jsdares .form-horizontal .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .form-horizontal .control-group:after {
+  clear: both;
+}
+.jsdares .form-horizontal .control-label {
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
+.jsdares .form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 180px;
+  *margin-left: 0;
+}
+.jsdares .form-horizontal .controls:first-child {
+  *padding-left: 180px;
+}
+.jsdares .form-horizontal .help-block {
+  margin-bottom: 0;
+}
+.jsdares .form-horizontal input + .help-block,
+.jsdares .form-horizontal select + .help-block,
+.jsdares .form-horizontal textarea + .help-block {
+  margin-top: 10.5px;
+}
+.jsdares .form-horizontal .form-actions {
+  padding-left: 180px;
+}
+.jsdares [class^="icon-"],
+.jsdares [class*=" icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  *margin-right: .3em;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../img/glyphicons-halflings.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  margin-top: 1px;
+}
+.jsdares .icon-white,
+.jsdares .nav-tabs > .active > a > [class^="icon-"],
+.jsdares .nav-tabs > .active > a > [class*=" icon-"],
+.jsdares .nav-pills > .active > a > [class^="icon-"],
+.jsdares .nav-pills > .active > a > [class*=" icon-"],
+.jsdares .nav-list > .active > a > [class^="icon-"],
+.jsdares .nav-list > .active > a > [class*=" icon-"],
+.jsdares .navbar-inverse .nav > .active > a > [class^="icon-"],
+.jsdares .navbar-inverse .nav > .active > a > [class*=" icon-"],
+.jsdares .dropdown-menu > li > a:hover > [class^="icon-"],
+.jsdares .dropdown-menu > li > a:hover > [class*=" icon-"],
+.jsdares .dropdown-menu > .active > a > [class^="icon-"],
+.jsdares .dropdown-menu > .active > a > [class*=" icon-"] {
+  background-image: url("../img/glyphicons-halflings-white.png");
+}
+.jsdares .icon-glass {
+  background-position: 0      0;
+}
+.jsdares .icon-music {
+  background-position: -24px 0;
+}
+.jsdares .icon-search {
+  background-position: -48px 0;
+}
+.jsdares .icon-envelope {
+  background-position: -72px 0;
+}
+.jsdares .icon-heart {
+  background-position: -96px 0;
+}
+.jsdares .icon-star {
+  background-position: -120px 0;
+}
+.jsdares .icon-star-empty {
+  background-position: -144px 0;
+}
+.jsdares .icon-user {
+  background-position: -168px 0;
+}
+.jsdares .icon-film {
+  background-position: -192px 0;
+}
+.jsdares .icon-th-large {
+  background-position: -216px 0;
+}
+.jsdares .icon-th {
+  background-position: -240px 0;
+}
+.jsdares .icon-th-list {
+  background-position: -264px 0;
+}
+.jsdares .icon-ok {
+  background-position: -288px 0;
+}
+.jsdares .icon-remove {
+  background-position: -312px 0;
+}
+.jsdares .icon-zoom-in {
+  background-position: -336px 0;
+}
+.jsdares .icon-zoom-out {
+  background-position: -360px 0;
+}
+.jsdares .icon-off {
+  background-position: -384px 0;
+}
+.jsdares .icon-signal {
+  background-position: -408px 0;
+}
+.jsdares .icon-cog {
+  background-position: -432px 0;
+}
+.jsdares .icon-trash {
+  background-position: -456px 0;
+}
+.jsdares .icon-home {
+  background-position: 0 -24px;
+}
+.jsdares .icon-file {
+  background-position: -24px -24px;
+}
+.jsdares .icon-time {
+  background-position: -48px -24px;
+}
+.jsdares .icon-road {
+  background-position: -72px -24px;
+}
+.jsdares .icon-download-alt {
+  background-position: -96px -24px;
+}
+.jsdares .icon-download {
+  background-position: -120px -24px;
+}
+.jsdares .icon-upload {
+  background-position: -144px -24px;
+}
+.jsdares .icon-inbox {
+  background-position: -168px -24px;
+}
+.jsdares .icon-play-circle {
+  background-position: -192px -24px;
+}
+.jsdares .icon-repeat {
+  background-position: -216px -24px;
+}
+.jsdares .icon-refresh {
+  background-position: -240px -24px;
+}
+.jsdares .icon-list-alt {
+  background-position: -264px -24px;
+}
+.jsdares .icon-lock {
+  background-position: -287px -24px;
+}
+.jsdares .icon-flag {
+  background-position: -312px -24px;
+}
+.jsdares .icon-headphones {
+  background-position: -336px -24px;
+}
+.jsdares .icon-volume-off {
+  background-position: -360px -24px;
+}
+.jsdares .icon-volume-down {
+  background-position: -384px -24px;
+}
+.jsdares .icon-volume-up {
+  background-position: -408px -24px;
+}
+.jsdares .icon-qrcode {
+  background-position: -432px -24px;
+}
+.jsdares .icon-barcode {
+  background-position: -456px -24px;
+}
+.jsdares .icon-tag {
+  background-position: 0 -48px;
+}
+.jsdares .icon-tags {
+  background-position: -25px -48px;
+}
+.jsdares .icon-book {
+  background-position: -48px -48px;
+}
+.jsdares .icon-bookmark {
+  background-position: -72px -48px;
+}
+.jsdares .icon-print {
+  background-position: -96px -48px;
+}
+.jsdares .icon-camera {
+  background-position: -120px -48px;
+}
+.jsdares .icon-font {
+  background-position: -144px -48px;
+}
+.jsdares .icon-bold {
+  background-position: -167px -48px;
+}
+.jsdares .icon-italic {
+  background-position: -192px -48px;
+}
+.jsdares .icon-text-height {
+  background-position: -216px -48px;
+}
+.jsdares .icon-text-width {
+  background-position: -240px -48px;
+}
+.jsdares .icon-align-left {
+  background-position: -264px -48px;
+}
+.jsdares .icon-align-center {
+  background-position: -288px -48px;
+}
+.jsdares .icon-align-right {
+  background-position: -312px -48px;
+}
+.jsdares .icon-align-justify {
+  background-position: -336px -48px;
+}
+.jsdares .icon-list {
+  background-position: -360px -48px;
+}
+.jsdares .icon-indent-left {
+  background-position: -384px -48px;
+}
+.jsdares .icon-indent-right {
+  background-position: -408px -48px;
+}
+.jsdares .icon-facetime-video {
+  background-position: -432px -48px;
+}
+.jsdares .icon-picture {
+  background-position: -456px -48px;
+}
+.jsdares .icon-pencil {
+  background-position: 0 -72px;
+}
+.jsdares .icon-map-marker {
+  background-position: -24px -72px;
+}
+.jsdares .icon-adjust {
+  background-position: -48px -72px;
+}
+.jsdares .icon-tint {
+  background-position: -72px -72px;
+}
+.jsdares .icon-edit {
+  background-position: -96px -72px;
+}
+.jsdares .icon-share {
+  background-position: -120px -72px;
+}
+.jsdares .icon-check {
+  background-position: -144px -72px;
+}
+.jsdares .icon-move {
+  background-position: -168px -72px;
+}
+.jsdares .icon-step-backward {
+  background-position: -192px -72px;
+}
+.jsdares .icon-fast-backward {
+  background-position: -216px -72px;
+}
+.jsdares .icon-backward {
+  background-position: -240px -72px;
+}
+.jsdares .icon-play {
+  background-position: -264px -72px;
+}
+.jsdares .icon-pause {
+  background-position: -288px -72px;
+}
+.jsdares .icon-stop {
+  background-position: -312px -72px;
+}
+.jsdares .icon-forward {
+  background-position: -336px -72px;
+}
+.jsdares .icon-fast-forward {
+  background-position: -360px -72px;
+}
+.jsdares .icon-step-forward {
+  background-position: -384px -72px;
+}
+.jsdares .icon-eject {
+  background-position: -408px -72px;
+}
+.jsdares .icon-chevron-left {
+  background-position: -432px -72px;
+}
+.jsdares .icon-chevron-right {
+  background-position: -456px -72px;
+}
+.jsdares .icon-plus-sign {
+  background-position: 0 -96px;
+}
+.jsdares .icon-minus-sign {
+  background-position: -24px -96px;
+}
+.jsdares .icon-remove-sign {
+  background-position: -48px -96px;
+}
+.jsdares .icon-ok-sign {
+  background-position: -72px -96px;
+}
+.jsdares .icon-question-sign {
+  background-position: -96px -96px;
+}
+.jsdares .icon-info-sign {
+  background-position: -120px -96px;
+}
+.jsdares .icon-screenshot {
+  background-position: -144px -96px;
+}
+.jsdares .icon-remove-circle {
+  background-position: -168px -96px;
+}
+.jsdares .icon-ok-circle {
+  background-position: -192px -96px;
+}
+.jsdares .icon-ban-circle {
+  background-position: -216px -96px;
+}
+.jsdares .icon-arrow-left {
+  background-position: -240px -96px;
+}
+.jsdares .icon-arrow-right {
+  background-position: -264px -96px;
+}
+.jsdares .icon-arrow-up {
+  background-position: -289px -96px;
+}
+.jsdares .icon-arrow-down {
+  background-position: -312px -96px;
+}
+.jsdares .icon-share-alt {
+  background-position: -336px -96px;
+}
+.jsdares .icon-resize-full {
+  background-position: -360px -96px;
+}
+.jsdares .icon-resize-small {
+  background-position: -384px -96px;
+}
+.jsdares .icon-plus {
+  background-position: -408px -96px;
+}
+.jsdares .icon-minus {
+  background-position: -433px -96px;
+}
+.jsdares .icon-asterisk {
+  background-position: -456px -96px;
+}
+.jsdares .icon-exclamation-sign {
+  background-position: 0 -120px;
+}
+.jsdares .icon-gift {
+  background-position: -24px -120px;
+}
+.jsdares .icon-leaf {
+  background-position: -48px -120px;
+}
+.jsdares .icon-fire {
+  background-position: -72px -120px;
+}
+.jsdares .icon-eye-open {
+  background-position: -96px -120px;
+}
+.jsdares .icon-eye-close {
+  background-position: -120px -120px;
+}
+.jsdares .icon-warning-sign {
+  background-position: -144px -120px;
+}
+.jsdares .icon-plane {
+  background-position: -168px -120px;
+}
+.jsdares .icon-calendar {
+  background-position: -192px -120px;
+}
+.jsdares .icon-random {
+  background-position: -216px -120px;
+  width: 16px;
+}
+.jsdares .icon-comment {
+  background-position: -240px -120px;
+}
+.jsdares .icon-magnet {
+  background-position: -264px -120px;
+}
+.jsdares .icon-chevron-up {
+  background-position: -288px -120px;
+}
+.jsdares .icon-chevron-down {
+  background-position: -313px -119px;
+}
+.jsdares .icon-retweet {
+  background-position: -336px -120px;
+}
+.jsdares .icon-shopping-cart {
+  background-position: -360px -120px;
+}
+.jsdares .icon-folder-close {
+  background-position: -384px -120px;
+}
+.jsdares .icon-folder-open {
+  background-position: -408px -120px;
+  width: 16px;
+}
+.jsdares .icon-resize-vertical {
+  background-position: -432px -119px;
+}
+.jsdares .icon-resize-horizontal {
+  background-position: -456px -118px;
+}
+.jsdares .icon-hdd {
+  background-position: 0 -144px;
+}
+.jsdares .icon-bullhorn {
+  background-position: -24px -144px;
+}
+.jsdares .icon-bell {
+  background-position: -48px -144px;
+}
+.jsdares .icon-certificate {
+  background-position: -72px -144px;
+}
+.jsdares .icon-thumbs-up {
+  background-position: -96px -144px;
+}
+.jsdares .icon-thumbs-down {
+  background-position: -120px -144px;
+}
+.jsdares .icon-hand-right {
+  background-position: -144px -144px;
+}
+.jsdares .icon-hand-left {
+  background-position: -168px -144px;
+}
+.jsdares .icon-hand-up {
+  background-position: -192px -144px;
+}
+.jsdares .icon-hand-down {
+  background-position: -216px -144px;
+}
+.jsdares .icon-circle-arrow-right {
+  background-position: -240px -144px;
+}
+.jsdares .icon-circle-arrow-left {
+  background-position: -264px -144px;
+}
+.jsdares .icon-circle-arrow-up {
+  background-position: -288px -144px;
+}
+.jsdares .icon-circle-arrow-down {
+  background-position: -312px -144px;
+}
+.jsdares .icon-globe {
+  background-position: -336px -144px;
+}
+.jsdares .icon-wrench {
+  background-position: -360px -144px;
+}
+.jsdares .icon-tasks {
+  background-position: -384px -144px;
+}
+.jsdares .icon-filter {
+  background-position: -408px -144px;
+}
+.jsdares .icon-briefcase {
+  background-position: -432px -144px;
+}
+.jsdares .icon-fullscreen {
+  background-position: -456px -144px;
+}
+.jsdares .btn {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 14px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 21px;
+  *line-height: 21px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e6e6e6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.jsdares .btn:hover,
+.jsdares .btn:active,
+.jsdares .btn.active,
+.jsdares .btn.disabled,
+.jsdares .btn[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+.jsdares .btn:active,
+.jsdares .btn.active {
+  background-color: #cccccc \9;
+}
+.jsdares .btn:first-child {
+  *margin-left: 0;
+}
+.jsdares .btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.jsdares .btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.jsdares .btn.active,
+.jsdares .btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.jsdares .btn.disabled,
+.jsdares .btn[disabled] {
+  cursor: default;
+  background-color: #e6e6e6;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.jsdares .btn-large {
+  padding: 9px 14px;
+  font-size: 16px;
+  line-height: normal;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.jsdares .btn-large [class^="icon-"] {
+  margin-top: 2px;
+}
+.jsdares .btn-small {
+  padding: 3px 9px;
+  font-size: 12px;
+  line-height: 19px;
+}
+.jsdares .btn-small [class^="icon-"] {
+  margin-top: 0;
+}
+.jsdares .btn-mini {
+  padding: 2px 6px;
+  font-size: 11px;
+  line-height: 18px;
+}
+.jsdares .btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.jsdares .btn-block + .btn-block {
+  margin-top: 5px;
+}
+.jsdares input[type="submit"].btn-block,
+.jsdares input[type="reset"].btn-block,
+.jsdares input[type="button"].btn-block {
+  width: 100%;
+}
+.jsdares .btn-primary.active,
+.jsdares .btn-warning.active,
+.jsdares .btn-danger.active,
+.jsdares .btn-success.active,
+.jsdares .btn-info.active,
+.jsdares .btn-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.jsdares .btn {
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+}
+.jsdares .btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0b81da;
+  background-image: -moz-linear-gradient(top, #0b95da, #0b62da);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0b95da), to(#0b62da));
+  background-image: -webkit-linear-gradient(top, #0b95da, #0b62da);
+  background-image: -o-linear-gradient(top, #0b95da, #0b62da);
+  background-image: linear-gradient(to bottom, #0b95da, #0b62da);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0b95da', endColorstr='#ff0b62da', GradientType=0);
+  border-color: #0b62da #0b62da #084191;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #0b62da;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-primary:hover,
+.jsdares .btn-primary:active,
+.jsdares .btn-primary.active,
+.jsdares .btn-primary.disabled,
+.jsdares .btn-primary[disabled] {
+  color: #ffffff;
+  background-color: #0b62da;
+  *background-color: #0a57c2;
+}
+.jsdares .btn-primary:active,
+.jsdares .btn-primary.active {
+  background-color: #094caa \9;
+}
+.jsdares .btn-warning {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #db8000;
+  background-image: -moz-linear-gradient(top, #f08c00, #bd6e00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f08c00), to(#bd6e00));
+  background-image: -webkit-linear-gradient(top, #f08c00, #bd6e00);
+  background-image: -o-linear-gradient(top, #f08c00, #bd6e00);
+  background-image: linear-gradient(to bottom, #f08c00, #bd6e00);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff08c00', endColorstr='#ffbd6e00', GradientType=0);
+  border-color: #bd6e00 #bd6e00 #704100;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #bd6e00;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-warning:hover,
+.jsdares .btn-warning:active,
+.jsdares .btn-warning.active,
+.jsdares .btn-warning.disabled,
+.jsdares .btn-warning[disabled] {
+  color: #ffffff;
+  background-color: #bd6e00;
+  *background-color: #a35f00;
+}
+.jsdares .btn-warning:active,
+.jsdares .btn-warning.active {
+  background-color: #8a5000 \9;
+}
+.jsdares .btn-danger {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #c70a0a;
+  background-image: -moz-linear-gradient(top, #da0b0b, #aa0909);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#da0b0b), to(#aa0909));
+  background-image: -webkit-linear-gradient(top, #da0b0b, #aa0909);
+  background-image: -o-linear-gradient(top, #da0b0b, #aa0909);
+  background-image: linear-gradient(to bottom, #da0b0b, #aa0909);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffda0b0b', endColorstr='#ffaa0909', GradientType=0);
+  border-color: #aa0909 #aa0909 #610505;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #aa0909;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-danger:hover,
+.jsdares .btn-danger:active,
+.jsdares .btn-danger.active,
+.jsdares .btn-danger.disabled,
+.jsdares .btn-danger[disabled] {
+  color: #ffffff;
+  background-color: #aa0909;
+  *background-color: #910808;
+}
+.jsdares .btn-danger:active,
+.jsdares .btn-danger.active {
+  background-color: #790606 \9;
+}
+.jsdares .btn-success {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #319c1c;
+  background-image: -moz-linear-gradient(top, #36ad1f, #298217);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#36ad1f), to(#298217));
+  background-image: -webkit-linear-gradient(top, #36ad1f, #298217);
+  background-image: -o-linear-gradient(top, #36ad1f, #298217);
+  background-image: linear-gradient(to bottom, #36ad1f, #298217);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff36ad1f', endColorstr='#ff298217', GradientType=0);
+  border-color: #298217 #298217 #14410b;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #298217;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-success:hover,
+.jsdares .btn-success:active,
+.jsdares .btn-success.active,
+.jsdares .btn-success.disabled,
+.jsdares .btn-success[disabled] {
+  color: #ffffff;
+  background-color: #298217;
+  *background-color: #226c13;
+}
+.jsdares .btn-success:active,
+.jsdares .btn-success.active {
+  background-color: #1b570f \9;
+}
+.jsdares .btn-info {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #a70ac7;
+  background-image: -moz-linear-gradient(top, #b80bda, #8f09aa);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b80bda), to(#8f09aa));
+  background-image: -webkit-linear-gradient(top, #b80bda, #8f09aa);
+  background-image: -o-linear-gradient(top, #b80bda, #8f09aa);
+  background-image: linear-gradient(to bottom, #b80bda, #8f09aa);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb80bda', endColorstr='#ff8f09aa', GradientType=0);
+  border-color: #8f09aa #8f09aa #520561;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #8f09aa;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-info:hover,
+.jsdares .btn-info:active,
+.jsdares .btn-info.active,
+.jsdares .btn-info.disabled,
+.jsdares .btn-info[disabled] {
+  color: #ffffff;
+  background-color: #8f09aa;
+  *background-color: #7a0891;
+}
+.jsdares .btn-info:active,
+.jsdares .btn-info.active {
+  background-color: #660679 \9;
+}
+.jsdares .btn-inverse {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #4b4b4b;
+  background-image: -moz-linear-gradient(top, #555555, #3b3b3b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#3b3b3b));
+  background-image: -webkit-linear-gradient(top, #555555, #3b3b3b);
+  background-image: -o-linear-gradient(top, #555555, #3b3b3b);
+  background-image: linear-gradient(to bottom, #555555, #3b3b3b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff3b3b3b', GradientType=0);
+  border-color: #3b3b3b #3b3b3b #151515;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #3b3b3b;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.jsdares .btn-inverse:hover,
+.jsdares .btn-inverse:active,
+.jsdares .btn-inverse.active,
+.jsdares .btn-inverse.disabled,
+.jsdares .btn-inverse[disabled] {
+  color: #ffffff;
+  background-color: #3b3b3b;
+  *background-color: #2f2f2f;
+}
+.jsdares .btn-inverse:active,
+.jsdares .btn-inverse.active {
+  background-color: #222222 \9;
+}
+.jsdares button.btn,
+.jsdares input[type="submit"].btn {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+.jsdares button.btn::-moz-focus-inner,
+.jsdares input[type="submit"].btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+.jsdares button.btn.btn-large,
+.jsdares input[type="submit"].btn.btn-large {
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+.jsdares button.btn.btn-small,
+.jsdares input[type="submit"].btn.btn-small {
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+}
+.jsdares button.btn.btn-mini,
+.jsdares input[type="submit"].btn.btn-mini {
+  *padding-top: 1px;
+  *padding-bottom: 1px;
+}
+.jsdares .btn-link,
+.jsdares .btn-link:active,
+.jsdares .btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.jsdares .btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: #0b95da;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .btn-link:hover {
+  color: #086391;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.jsdares .btn-link[disabled]:hover {
+  color: #333333;
+  text-decoration: none;
+}
+.jsdares .btn-group {
+  position: relative;
+  font-size: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  *margin-left: .3em;
+}
+.jsdares .btn-group:first-child {
+  *margin-left: 0;
+}
+.jsdares .btn-group + .btn-group {
+  margin-left: 5px;
+}
+.jsdares .btn-toolbar {
+  font-size: 0;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+}
+.jsdares .btn-toolbar .btn-group {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+}
+.jsdares .btn-toolbar .btn + .btn,
+.jsdares .btn-toolbar .btn-group + .btn,
+.jsdares .btn-toolbar .btn + .btn-group {
+  margin-left: 5px;
+}
+.jsdares .btn-group > .btn {
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .btn-group > .btn + .btn {
+  margin-left: -1px;
+}
+.jsdares .btn-group > .btn,
+.jsdares .btn-group > .dropdown-menu {
+  font-size: 14px;
+}
+.jsdares .btn-group > .btn-mini {
+  font-size: 11px;
+}
+.jsdares .btn-group > .btn-small {
+  font-size: 12px;
+}
+.jsdares .btn-group > .btn-large {
+  font-size: 16px;
+}
+.jsdares .btn-group > .btn:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-left-radius: 4px;
+}
+.jsdares .btn-group > .btn:last-child,
+.jsdares .btn-group > .dropdown-toggle {
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-bottom-right-radius: 4px;
+}
+.jsdares .btn-group > .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-left-radius: 6px;
+}
+.jsdares .btn-group > .btn.large:last-child,
+.jsdares .btn-group > .large.dropdown-toggle {
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  border-bottom-right-radius: 6px;
+}
+.jsdares .btn-group > .btn:hover,
+.jsdares .btn-group > .btn:focus,
+.jsdares .btn-group > .btn:active,
+.jsdares .btn-group > .btn.active {
+  z-index: 2;
+}
+.jsdares .btn-group .dropdown-toggle:active,
+.jsdares .btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+.jsdares .btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+  -webkit-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.125), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  *padding-top: 5px;
+  *padding-bottom: 5px;
+}
+.jsdares .btn-group > .btn-mini + .dropdown-toggle {
+  padding-left: 5px;
+  padding-right: 5px;
+  *padding-top: 2px;
+  *padding-bottom: 2px;
+}
+.jsdares .btn-group > .btn-small + .dropdown-toggle {
+  *padding-top: 5px;
+  *padding-bottom: 4px;
+}
+.jsdares .btn-group > .btn-large + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+  *padding-top: 7px;
+  *padding-bottom: 7px;
+}
+.jsdares .btn-group.open .dropdown-toggle {
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.jsdares .btn-group.open .btn.dropdown-toggle {
+  background-color: #e6e6e6;
+}
+.jsdares .btn-group.open .btn-primary.dropdown-toggle {
+  background-color: #0b62da;
+}
+.jsdares .btn-group.open .btn-warning.dropdown-toggle {
+  background-color: #bd6e00;
+}
+.jsdares .btn-group.open .btn-danger.dropdown-toggle {
+  background-color: #aa0909;
+}
+.jsdares .btn-group.open .btn-success.dropdown-toggle {
+  background-color: #298217;
+}
+.jsdares .btn-group.open .btn-info.dropdown-toggle {
+  background-color: #8f09aa;
+}
+.jsdares .btn-group.open .btn-inverse.dropdown-toggle {
+  background-color: #3b3b3b;
+}
+.jsdares .btn .caret {
+  margin-top: 8px;
+  margin-left: 0;
+}
+.jsdares .btn-mini .caret,
+.jsdares .btn-small .caret,
+.jsdares .btn-large .caret {
+  margin-top: 6px;
+}
+.jsdares .btn-large .caret {
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 5px;
+}
+.jsdares .dropup .btn-large .caret {
+  border-bottom: 5px solid #000000;
+  border-top: 0;
+}
+.jsdares .btn-primary .caret,
+.jsdares .btn-warning .caret,
+.jsdares .btn-danger .caret,
+.jsdares .btn-info .caret,
+.jsdares .btn-success .caret,
+.jsdares .btn-inverse .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.jsdares .btn-group-vertical {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+}
+.jsdares .btn-group-vertical .btn {
+  display: block;
+  float: none;
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .btn-group-vertical .btn + .btn {
+  margin-left: 0;
+  margin-top: -1px;
+}
+.jsdares .btn-group-vertical .btn:first-child {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.jsdares .btn-group-vertical .btn:last-child {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.jsdares .btn-group-vertical .btn-large:first-child {
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+.jsdares .btn-group-vertical .btn-large:last-child {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+.jsdares .nav {
+  margin-left: 0;
+  margin-bottom: 21px;
+  list-style: none;
+}
+.jsdares .nav > li > a {
+  display: block;
+}
+.jsdares .nav > li > a:hover {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.jsdares .nav > .pull-right {
+  float: right;
+}
+.jsdares .nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+.jsdares .nav li + .nav-header {
+  margin-top: 9px;
+}
+.jsdares .nav-list {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0;
+}
+.jsdares .nav-list > li > a,
+.jsdares .nav-list .nav-header {
+  margin-left: -15px;
+  margin-right: -15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.jsdares .nav-list > li > a {
+  padding: 3px 15px;
+}
+.jsdares .nav-list > .active > a,
+.jsdares .nav-list > .active > a:hover {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #0b95da;
+}
+.jsdares .nav-list [class^="icon-"] {
+  margin-right: 2px;
+}
+.jsdares .nav-list .divider {
+  *width: 100%;
+  height: 1px;
+  margin: 9.5px 1px;
+  *margin: -5px 0 5px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+}
+.jsdares .nav-tabs,
+.jsdares .nav-pills {
+  *zoom: 1;
+}
+.jsdares .nav-tabs:before,
+.jsdares .nav-pills:before,
+.jsdares .nav-tabs:after,
+.jsdares .nav-pills:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .nav-tabs:after,
+.jsdares .nav-pills:after {
+  clear: both;
+}
+.jsdares .nav-tabs > li,
+.jsdares .nav-pills > li {
+  float: left;
+}
+.jsdares .nav-tabs > li > a,
+.jsdares .nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px;
+}
+.jsdares .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.jsdares .nav-tabs > li {
+  margin-bottom: -1px;
+}
+.jsdares .nav-tabs > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 21px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.jsdares .nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+.jsdares .nav-tabs > .active > a,
+.jsdares .nav-tabs > .active > a:hover {
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.jsdares .nav-pills > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.jsdares .nav-pills > .active > a,
+.jsdares .nav-pills > .active > a:hover {
+  color: #ffffff;
+  background-color: #0b95da;
+}
+.jsdares .nav-stacked > li {
+  float: none;
+}
+.jsdares .nav-stacked > li > a {
+  margin-right: 0;
+}
+.jsdares .nav-tabs.nav-stacked {
+  border-bottom: 0;
+}
+.jsdares .nav-tabs.nav-stacked > li > a {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.jsdares .nav-tabs.nav-stacked > li:first-child > a {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.jsdares .nav-tabs.nav-stacked > li:last-child > a {
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.jsdares .nav-tabs.nav-stacked > li > a:hover {
+  border-color: #ddd;
+  z-index: 2;
+}
+.jsdares .nav-pills.nav-stacked > li > a {
+  margin-bottom: 3px;
+}
+.jsdares .nav-pills.nav-stacked > li:last-child > a {
+  margin-bottom: 1px;
+}
+.jsdares .nav-tabs .dropdown-menu {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+}
+.jsdares .nav-pills .dropdown-menu {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.jsdares .nav .dropdown-toggle .caret {
+  border-top-color: #0b95da;
+  border-bottom-color: #0b95da;
+  margin-top: 6px;
+}
+.jsdares .nav .dropdown-toggle:hover .caret {
+  border-top-color: #086391;
+  border-bottom-color: #086391;
+}
+.jsdares .nav-tabs .dropdown-toggle .caret {
+  margin-top: 8px;
+}
+.jsdares .nav .active .dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.jsdares .nav-tabs .active .dropdown-toggle .caret {
+  border-top-color: #555555;
+  border-bottom-color: #555555;
+}
+.jsdares .nav > .dropdown.active > a:hover {
+  cursor: pointer;
+}
+.jsdares .nav-tabs .open .dropdown-toggle,
+.jsdares .nav-pills .open .dropdown-toggle,
+.jsdares .nav > li.dropdown.open.active > a:hover {
+  color: #ffffff;
+  background-color: #999999;
+  border-color: #999999;
+}
+.jsdares .nav li.dropdown.open .caret,
+.jsdares .nav li.dropdown.open.active .caret,
+.jsdares .nav li.dropdown.open a:hover .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.jsdares .tabs-stacked .open > a:hover {
+  border-color: #999999;
+}
+.jsdares .tabbable {
+  *zoom: 1;
+}
+.jsdares .tabbable:before,
+.jsdares .tabbable:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .tabbable:after {
+  clear: both;
+}
+.jsdares .tab-content {
+  overflow: auto;
+}
+.jsdares .tabs-below > .nav-tabs,
+.jsdares .tabs-right > .nav-tabs,
+.jsdares .tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+.jsdares .tab-content > .tab-pane,
+.jsdares .pill-content > .pill-pane {
+  display: none;
+}
+.jsdares .tab-content > .active,
+.jsdares .pill-content > .active {
+  display: block;
+}
+.jsdares .tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+.jsdares .tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+.jsdares .tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.jsdares .tabs-below > .nav-tabs > li > a:hover {
+  border-bottom-color: transparent;
+  border-top-color: #ddd;
+}
+.jsdares .tabs-below > .nav-tabs > .active > a,
+.jsdares .tabs-below > .nav-tabs > .active > a:hover {
+  border-color: transparent #ddd #ddd #ddd;
+}
+.jsdares .tabs-left > .nav-tabs > li,
+.jsdares .tabs-right > .nav-tabs > li {
+  float: none;
+}
+.jsdares .tabs-left > .nav-tabs > li > a,
+.jsdares .tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+.jsdares .tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+.jsdares .tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+.jsdares .tabs-left > .nav-tabs > li > a:hover {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+.jsdares .tabs-left > .nav-tabs .active > a,
+.jsdares .tabs-left > .nav-tabs .active > a:hover {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+.jsdares .tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+.jsdares .tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+.jsdares .tabs-right > .nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+.jsdares .tabs-right > .nav-tabs .active > a,
+.jsdares .tabs-right > .nav-tabs .active > a:hover {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+.jsdares .nav > .disabled > a {
+  color: #999999;
+}
+.jsdares .nav > .disabled > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default;
+}
+.jsdares .modal-open .modal .dropdown-menu {
+  z-index: 2050;
+}
+.jsdares .modal-open .modal .dropdown.open {
+  *z-index: 2050;
+}
+.jsdares .modal-open .modal .popover {
+  z-index: 2060;
+}
+.jsdares .modal-open .modal .tooltip {
+  z-index: 2080;
+}
+.jsdares .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.jsdares .modal-backdrop.fade {
+  opacity: 0;
+}
+.jsdares .modal-backdrop,
+.jsdares .modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.jsdares .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1050;
+  overflow: auto;
+  width: 560px;
+  margin: -250px 0 0 -280px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  /* IE6-7 */
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.jsdares .modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+  top: -25%;
+}
+.jsdares .modal.fade.in {
+  top: 50%;
+}
+.jsdares .modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+}
+.jsdares .modal-header .close {
+  margin-top: 2px;
+}
+.jsdares .modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+.jsdares .modal-body {
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+.jsdares .modal-form {
+  margin-bottom: 0;
+}
+.jsdares .modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+.jsdares .modal-footer:before,
+.jsdares .modal-footer:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.jsdares .modal-footer:after {
+  clear: both;
+}
+.jsdares .modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+.jsdares .modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.jsdares .tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  visibility: visible;
+  padding: 5px;
+  font-size: 11px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.jsdares .tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.jsdares .tooltip.top {
+  margin-top: -3px;
+}
+.jsdares .tooltip.right {
+  margin-left: 3px;
+}
+.jsdares .tooltip.bottom {
+  margin-top: 3px;
+}
+.jsdares .tooltip.left {
+  margin-left: -3px;
+}
+.jsdares .tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.jsdares .tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.jsdares .tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.jsdares .tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.jsdares .tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.jsdares .tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.jsdares .pull-right {
+  float: right;
+}
+.jsdares .pull-left {
+  float: left;
+}
+.jsdares .hide {
+  display: none;
+}
+.jsdares .show {
+  display: block;
+}
+.jsdares .invisible {
+  visibility: hidden;
+}
+.jsdares .affix {
+  position: fixed;
+}
+.jsdares .btn {
+  line-height: 18px;
+}
+.jsdares div.colorpicker {
+  margin: 0;
+  position: relative;
+}
+.jsdares div.colorpicker canvas {
+  float: left;
+}
+.jsdares div.colorpicker div.circle {
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  background-clip: padding-box;
+}
+.jsdares div.colorpicker div.circle.alpha {
+  background-image: url('../img/transparent.gif');
+  opacity: 0.0;
+}
+.jsdares div.colorpicker div.circle.lightness {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  margin: -1px 0 0 -1px;
+}
+.jsdares div.colorpicker span.picker,
+.jsdares div.colorpicker span.handle {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 4px #000000 inset;
+  border: 1px solid #fff;
+  cursor: pointer;
+  margin: -5px;
+  position: absolute;
+  z-index: 2;
+}
+.jsdares div.colorpicker div.slider {
+  width: 6px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.2) inset;
+  float: left;
+  margin: -1px 0 0 10px;
+}
+.jsdares div.colorpicker div.slider span.handle {
+  margin: -5px -2px -5px -2px;
+}
+.jsdares div.colorpicker div.slider.lightness {
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #000000);
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), #000000);
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), #000000);
+}
+.jsdares div.colorpicker div.slider.alpha {
+  background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.6)), url('../img/transparent.gif') center;
+  background: -moz-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.6)), url('../img/transparent.gif') center;
+  background: linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.6)), url('../img/transparent.gif') center;
+}
+.jsdares div.colorpicker input.colorInput {
+  margin-top: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  background-color: #fafafa;
+  border-radius: 3px;
+  padding: 5px 8px;
+}
+.jsdares .icon-trophy {
+  background-position: -1px 0px;
+  background-image: url("../img/trophy16.png");
+}
+.jsdares .icon-trophy.icon-white {
+  background-image: url("../img/trophy16white.png");
+}
+.jsdares .icon-keyboard {
+  background-position: 0px 0px;
+  background-image: url("../img/keyboard.png");
+}
+.jsdares .icon-keyboard.icon-white {
+  background-image: url("../img/keyboardwhite.png");
+}
+.jsdares .icon-mouse {
+  background-position: 0px 0px;
+  background-image: url("../img/mouse.png");
+}
+.jsdares .icon-mouse.icon-white {
+  background-image: url("../img/mousewhite.png");
+}
+.jsdares .icon-twitter {
+  background-position: 0px 0px;
+  background-image: url("../img/glyphicons_392_twitter.png");
+  width: 24px;
+  height: 24px;
+}
+.jsdares .icon-twitter.icon-white {
+  background-image: url("../img/glyphicons_392_twitter-white.png");
+}
+.jsdares .icon-facebook {
+  background-position: 0px 0px;
+  background-image: url("../img/glyphicons_390_facebook.png");
+  width: 24px;
+  height: 24px;
+}
+.jsdares .icon-star-yellow {
+  background-position: 0px -1px;
+  background-image: url("../img/star-yellow.png");
+  width: 16px;
+  height: 16px;
+}
+.jsdares .icon-loader {
+  background-position: 0px 0px;
+  background-image: url("../img/loader.gif");
+  width: 16px;
+  height: 16px;
+}
+.jsdares .icon-loader.icon-white {
+  background-image: url("../img/loader-white.gif");
+}
+.jsdares .icon-ok-sign-color {
+  background-position: 0px 0px;
+  background-image: url("../img/ok.png");
+  width: 16px;
+  height: 16px;
+}
+.jsdares .icon-exclamation-sign-color {
+  background-position: 0px 0px;
+  background-image: url("../img/margin-message-icon-error.png");
+  width: 16px;
+  height: 16px;
+}
+.jsdares .icon-lock-color {
+  background-position: 0px 0px;
+  background-image: url("../img/lock.png");
+  width: 16px;
+  height: 16px;
+}
+.jsdares button::-moz-focus-inner {
+  border: 0;
+}
+.jsdares button:focus {
+  outline: none;
+}
+.jsdares .arrow-link {
+  color: #f08c00;
+  text-decoration: none;
+  border-bottom: 1px dotted #f08c00;
+}
+.jsdares .arrow-link:hover {
+  color: #f08c00;
+  text-decoration: none;
+}
+.jsdares .arrow {
+  position: absolute;
+  z-index: 100000;
+  display: none;
+}
+.jsdares .arrow.arrow-active {
+  display: block;
+}
+.jsdares .arrow .arrow-head {
+  position: absolute;
+}
+.jsdares .arrow .arrow-body {
+  position: absolute;
+  background-color: #f08c00;
+}
+.jsdares .arrow.arrow-left {
+  width: 80px;
+  height: 40px;
+  margin-top: -20px;
+}
+.jsdares .arrow.arrow-left.arrow-animate {
+  -animation-name: arrow-bounce-anim-left;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: 6;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-left;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 6;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-left;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: 6;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-left;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: 6;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-left;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: 6;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-left.arrow-animate-infinity {
+  -animation-name: arrow-bounce-anim-left;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: infinite;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-left;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-left;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-left;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-left;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-left .arrow-head {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid #f08c00;
+}
+.jsdares .arrow.arrow-left .arrow-body {
+  position: absolute;
+  left: 26px;
+  top: 20px;
+  margin-top: -10px;
+  height: 20px;
+  width: 50px;
+}
+.jsdares .arrow.arrow-right {
+  width: 80px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -80px;
+}
+.jsdares .arrow.arrow-right.arrow-animate {
+  -animation-name: arrow-bounce-anim-right;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: 6;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-right;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 6;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-right;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: 6;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-right;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: 6;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-right;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: 6;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-right.arrow-animate-infinity {
+  -animation-name: arrow-bounce-anim-right;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: infinite;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-right;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-right;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-right;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-right;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-right .arrow-head {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid #f08c00;
+}
+.jsdares .arrow.arrow-right .arrow-body {
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  margin-top: -10px;
+  height: 20px;
+  width: 50px;
+}
+.jsdares .arrow.arrow-up {
+  width: 40px;
+  height: 80px;
+  margin-left: -20px;
+}
+.jsdares .arrow.arrow-up.arrow-animate {
+  -animation-name: arrow-bounce-anim-up;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: 6;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-up;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 6;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-up;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: 6;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-up;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: 6;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-up;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: 6;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-up.arrow-animate-infinity {
+  -animation-name: arrow-bounce-anim-up;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: infinite;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-up;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-up;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-up;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-up;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-up .arrow-head {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid #f08c00;
+}
+.jsdares .arrow.arrow-up .arrow-body {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  margin-left: -10px;
+  width: 20px;
+  height: 50px;
+}
+.jsdares .arrow.arrow-down {
+  width: 40px;
+  height: 80px;
+  margin-left: -20px;
+  margin-top: -80px;
+}
+.jsdares .arrow.arrow-down.arrow-animate {
+  -animation-name: arrow-bounce-anim-down;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: 6;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-down;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 6;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-down;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: 6;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-down;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: 6;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-down;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: 6;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-down.arrow-animate-infinity {
+  -animation-name: arrow-bounce-anim-down;
+  -animation-duration: 0.4s;
+  -animation-timing-function: ease-out;
+  -animation-iteration-count: infinite;
+  -animation-direction: alternate;
+  -webkit-animation-name: arrow-bounce-anim-down;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: arrow-bounce-anim-down;
+  -moz-animation-duration: 0.4s;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: arrow-bounce-anim-down;
+  -ms-animation-duration: 0.4s;
+  -ms-animation-timing-function: ease-out;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: alternate;
+  -o-animation-name: arrow-bounce-anim-down;
+  -o-animation-duration: 0.4s;
+  -o-animation-timing-function: ease-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+}
+.jsdares .arrow.arrow-down .arrow-head {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #f08c00;
+}
+.jsdares .arrow.arrow-down .arrow-body {
+  position: absolute;
+  bottom: 26px;
+  left: 20px;
+  margin-left: -10px;
+  width: 20px;
+  height: 50px;
+}
+@keyframes arrow-bounce-anim-up {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 20px;
+  }
+}
+@-webkit-keyframes arrow-bounce-anim-up {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 20px;
+  }
+}
+@-moz-keyframes arrow-bounce-anim-up {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 20px;
+  }
+}
+@-ms-keyframes arrow-bounce-anim-up {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 20px;
+  }
+}
+@-o-keyframes arrow-bounce-anim-up {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: 20px;
+  }
+}
+@keyframes arrow-bounce-anim-down {
+  from {
+    margin-top: -80px;
+  }
+  to {
+    margin-top: -100px;
+  }
+}
+@-webkit-keyframes arrow-bounce-anim-down {
+  from {
+    margin-top: -80px;
+  }
+  to {
+    margin-top: -100px;
+  }
+}
+@-moz-keyframes arrow-bounce-anim-down {
+  from {
+    margin-top: -80px;
+  }
+  to {
+    margin-top: -100px;
+  }
+}
+@-ms-keyframes arrow-bounce-anim-down {
+  from {
+    margin-top: -80px;
+  }
+  to {
+    margin-top: -100px;
+  }
+}
+@-o-keyframes arrow-bounce-anim-down {
+  from {
+    margin-top: -80px;
+  }
+  to {
+    margin-top: -100px;
+  }
+}
+@keyframes arrow-bounce-anim-left {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+@-webkit-keyframes arrow-bounce-anim-left {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+@-moz-keyframes arrow-bounce-anim-left {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+@-ms-keyframes arrow-bounce-anim-left {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+@-o-keyframes arrow-bounce-anim-left {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 20px;
+  }
+}
+@keyframes arrow-bounce-anim-right {
+  from {
+    margin-left: -80px;
+  }
+  to {
+    margin-left: -100px;
+  }
+}
+@-webkit-keyframes arrow-bounce-anim-right {
+  from {
+    margin-left: -80px;
+  }
+  to {
+    margin-left: -100px;
+  }
+}
+@-moz-keyframes arrow-bounce-anim-right {
+  from {
+    margin-left: -80px;
+  }
+  to {
+    margin-left: -100px;
+  }
+}
+@-ms-keyframes arrow-bounce-anim-right {
+  from {
+    margin-left: -80px;
+  }
+  to {
+    margin-left: -100px;
+  }
+}
+@-o-keyframes arrow-bounce-anim-right {
+  from {
+    margin-left: -80px;
+  }
+  to {
+    margin-left: -100px;
+  }
+}
+.jsdares .clayer-slider .clayer-slider-container {
+  position: relative;
+  width: 100%;
+  height: 4px;
+}
+.jsdares .clayer-slider .clayer-slider-container .clayer-slider-bar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.jsdares .clayer-slider .clayer-slider-container .clayer-slider-bar .clayer-slider-segment-container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
+}
+.jsdares .clayer-slider .clayer-slider-container .clayer-slider-bar .clayer-slider-marker,
+.jsdares .clayer-slider .clayer-slider-container .clayer-slider-bar .clayer-slider-segment {
+  position: absolute;
+  height: 4px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.jsdares .clayer-slider .clayer-slider-container .clayer-slider-knob {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  margin-top: -5px;
+  margin-left: -6px;
+  top: 0px;
+  border: 1px solid #888;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.8);
+  background-color: #b8b8b8;
+  background-image: -moz-linear-gradient(top, #cccccc, #999999);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#999999));
+  background-image: -webkit-linear-gradient(top, #cccccc, #999999);
+  background-image: -o-linear-gradient(top, #cccccc, #999999);
+  background-image: linear-gradient(to bottom, #cccccc, #999999);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcccccc', endColorstr='#ff999999', GradientType=0);
+}
+@-moz-document url-prefix() {
+  .clayer-slider .clayer-slider-container .clayer-slider-knob {
+    border-color: rgba(70, 70, 70, 0.3);
+  }
+}
+.jsdares .robot-highlighting {
+  cursor: crosshair;
+}
+.jsdares .robot-container {
+  background-color: #dddddd;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 0px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.jsdares .robot-maze {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.jsdares .robot-maze .robot-maze-block {
+  position: absolute;
+}
+.robot-container.robot-interactive .jsdares .robot-maze .robot-maze-block {
+  cursor: pointer;
+}
+.jsdares .robot-maze .robot-maze-block.robot-maze-block-goal {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  background-color: #080;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-maze .robot-maze-block.robot-maze-block-goal.robot-maze-block-goal-blink {
+  background-color: #00ce00;
+}
+.jsdares .robot-maze .robot-maze-line-vertical {
+  position: absolute;
+  width: 20px;
+  margin-left: -10px;
+}
+.robot-container.robot-interactive .jsdares .robot-maze .robot-maze-line-vertical {
+  cursor: pointer;
+}
+.jsdares .robot-maze .robot-maze-line-vertical .robot-maze-line-inside {
+  position: absolute;
+  left: 9px;
+  top: 0px;
+  width: 2px;
+  height: 100%;
+  z-index: 5;
+  background-color: #ccc;
+}
+.jsdares .robot-maze .robot-maze-line-vertical.robot-maze-line-active .robot-maze-line-inside {
+  left: 7px;
+  width: 6px;
+  top: -3px;
+  height: 100%;
+  padding-bottom: 6px;
+  background-color: #333 !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-maze .robot-maze-line-horizontal {
+  position: absolute;
+  height: 20px;
+  margin-top: -10px;
+}
+.robot-container.robot-interactive .jsdares .robot-maze .robot-maze-line-horizontal {
+  cursor: pointer;
+}
+.jsdares .robot-maze .robot-maze-line-horizontal .robot-maze-line-inside {
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  z-index: 5;
+  background-color: #ccc;
+}
+.jsdares .robot-maze .robot-maze-line-horizontal.robot-maze-line-active .robot-maze-line-inside {
+  left: -3px;
+  height: 6px;
+  top: 7px;
+  width: 100%;
+  padding-right: 6px;
+  background-color: #333 !important;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-block:hover {
+  background-color: #0a0;
+  opacity: 0.3;
+}
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-block.robot-maze-block-goal:hover {
+  background-color: #0a0;
+  opacity: 0.7;
+}
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-line-vertical:hover .robot-maze-line-inside,
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-line-horizontal:hover .robot-maze-line-inside {
+  background-color: #888;
+}
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-line-vertical.robot-maze-line-active:hover .robot-maze-line-inside,
+.jsdares .robot-container.robot-interactive.robot-not-highlighting:hover .robot-maze .robot-maze-line-horizontal.robot-maze-line-active:hover .robot-maze-line-inside {
+  background-color: #000 !important;
+}
+.jsdares .robot-error {
+  opacity: 0.5;
+}
+.jsdares .robot-robot {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 38px;
+  margin-left: -19px;
+  height: 44px;
+  margin-top: -22px;
+  overflow: hidden;
+  background-image: url("../img/robot.png");
+  background-position: 0 0;
+  z-index: 20;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-robot.robot-green {
+  background-position: -41px 0;
+}
+.jsdares .robot-robot.robot-red {
+  background-position: -82px 0;
+}
+.jsdares .robot-robot.robot-initial {
+  opacity: 0.4;
+  z-index: 21;
+}
+.robot-container.robot-interactive .jsdares .robot-robot.robot-initial {
+  cursor: pointer;
+}
+.robot-container.robot-interactive .jsdares .robot-robot.robot-initial:hover {
+  opacity: 0.6;
+}
+.robot-container.robot-interactive .jsdares .robot-robot.robot-initial.robot-initial-dragging {
+  opacity: 0.8;
+}
+.jsdares .robot-path {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.jsdares .robot-path .robot-path-hidden {
+  display: none;
+}
+.jsdares .robot-path .robot-path-hidden.robot-path-highlight-time {
+  display: block;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.jsdares .robot-path .robot-path-line {
+  position: absolute;
+  height: 2px;
+  margin-top: -1px;
+  z-index: 11;
+}
+.jsdares .robot-path .robot-path-line .robot-path-line-inside {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-path .robot-path-point {
+  position: absolute;
+  width: 16px;
+  height: 6px;
+  margin-left: -8px;
+  margin-top: -3px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  z-index: 12;
+}
+.jsdares .robot-path .robot-path-point .robot-path-point-inside {
+  position: absolute;
+  background-color: #333;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  margin-left: -3px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-path .robot-path-point .robot-path-point-inside .robot-path-point-arrow {
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 2px;
+  background-color: #333;
+  -webkit-backface-visibility: hidden;
+}
+.jsdares .robot-highlighting .robot-path .robot-path-line {
+  height: 20px;
+  margin-top: -10px;
+}
+.jsdares .robot-highlighting .robot-path .robot-path-line .robot-path-line-inside {
+  top: 9px;
+}
+.jsdares .robot-highlighting .robot-path .robot-path-point {
+  width: 20px;
+  height: 10px;
+  margin-left: -10px;
+  margin-top: -5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.jsdares .robot-highlighting .robot-path .robot-path-point .robot-path-point-inside {
+  top: 5px;
+  left: 5px;
+}
+.jsdares .robot-path .robot-path-highlight-time.robot-path-line .robot-path-line-inside {
+  background-color: rgba(0, 110, 220, 0.4);
+}
+.jsdares .robot-path .robot-path-highlight-time.robot-path-point .robot-path-point-inside {
+  background-color: rgba(0, 110, 220, 0.4);
+}
+.jsdares .robot-path .robot-path-highlight-time.robot-path-point .robot-path-point-inside .robot-path-point-arrow {
+  background-color: rgba(0, 110, 220, 0.4);
+}
+.jsdares .robot-highlighting-current-event .robot-path .robot-path-highlight-event.robot-path-line,
+.jsdares .robot-container:hover .robot-path .robot-path-highlight-event.robot-path-line,
+.jsdares .robot-path .robot-path-highlight-event.robot-path-highlight-time.robot-path-line {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 13;
+}
+.jsdares .robot-highlighting-current-event .robot-path .robot-path-highlight-event.robot-path-line .robot-path-line-inside,
+.jsdares .robot-container:hover .robot-path .robot-path-highlight-event.robot-path-line .robot-path-line-inside,
+.jsdares .robot-path .robot-path-highlight-event.robot-path-highlight-time.robot-path-line .robot-path-line-inside {
+  background-color: #006edc;
+}
+.jsdares .robot-highlighting-current-event .robot-path .robot-path-highlight-event.robot-path-point,
+.jsdares .robot-container:hover .robot-path .robot-path-highlight-event.robot-path-point,
+.jsdares .robot-path .robot-path-highlight-event.robot-path-highlight-time.robot-path-point {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 14;
+}
+.jsdares .robot-highlighting-current-event .robot-path .robot-path-highlight-event.robot-path-point .robot-path-point-inside,
+.jsdares .robot-container:hover .robot-path .robot-path-highlight-event.robot-path-point .robot-path-point-inside,
+.jsdares .robot-path .robot-path-highlight-event.robot-path-highlight-time.robot-path-point .robot-path-point-inside {
+  background-color: #006edc;
+}
+.jsdares .robot-highlighting-current-event .robot-path .robot-path-highlight-event.robot-path-point .robot-path-point-inside .robot-path-point-arrow,
+.jsdares .robot-container:hover .robot-path .robot-path-highlight-event.robot-path-point .robot-path-point-inside .robot-path-point-arrow,
+.jsdares .robot-path .robot-path-highlight-event.robot-path-highlight-time.robot-path-point .robot-path-point-inside .robot-path-point-arrow {
+  background-color: #006edc;
+}
+.jsdares .robot-path .robot-path-highlight-step.robot-path-line,
+.jsdares .robot-path .robot-path-highlight.robot-path-line {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 15 !important;
+}
+.jsdares .robot-path .robot-path-highlight-step.robot-path-line .robot-path-line-inside,
+.jsdares .robot-path .robot-path-highlight.robot-path-line .robot-path-line-inside {
+  background-color: rgba(5, 195, 5, 0.85) !important;
+}
+.jsdares .robot-path .robot-path-highlight-step.robot-path-point,
+.jsdares .robot-path .robot-path-highlight.robot-path-point {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  z-index: 16 !important;
+}
+.jsdares .robot-path .robot-path-highlight-step.robot-path-point .robot-path-point-inside,
+.jsdares .robot-path .robot-path-highlight.robot-path-point .robot-path-point-inside {
+  background-color: rgba(5, 195, 5, 0.85) !important;
+}
+.jsdares .robot-path .robot-path-highlight-step.robot-path-point .robot-path-point-inside .robot-path-point-arrow,
+.jsdares .robot-path .robot-path-highlight.robot-path-point .robot-path-point-inside .robot-path-point-arrow {
+  background-color: rgba(5, 195, 5, 0.85) !important;
+}
+@keyframes robot-maze-block-goal-blink-anim {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-webkit-keyframes robot-maze-block-goal-blink-anim {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-moz-keyframes robot-maze-block-goal-blink-anim {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes robot-maze-block-goal-blink-anim {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes robot-maze-block-goal-blink-anim {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+  }
+  50% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+.jsdares .editor {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: #333333;
+  overflow: auto;
+  z-index: 50;
+}
+.jsdares .editor-code,
+.jsdares .editor-mirror {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  margin: 0px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  white-space: pre;
+}
+.jsdares .editor-code {
+  z-index: 70;
+  top: 0px;
+  left: 26px;
+  min-width: 460px;
+  min-height: 545px;
+  border-left: solid 1px #444444;
+  -webkit-transition: border-left 0.2s ease-in-out;
+  -moz-transition: border-left 0.2s ease-in-out;
+  -o-transition: border-left 0.2s ease-in-out;
+  transition: border-left 0.2s ease-in-out;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}
+.jsdares .editor-code:focus {
+  border-left: solid 1px #444444;
+  outline: 0px !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.jsdares .editor-code[disabled],
+.jsdares .editor-code[readonly] {
+  background-color: #333333;
+  cursor: default;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.jsdares .editor-error .editor-code {
+  border-left-color: #aa5544 !important;
+}
+.jsdares .editor-step .editor-code {
+  border-left-color: #559955 !important;
+}
+.jsdares .editor-mirror {
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.jsdares .editor-mirror-container {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+.jsdares .editor-margin {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 26px;
+  height: 10px;
+  overflow: visible;
+  z-index: 95;
+}
+.editor-typing .jsdares .editor-margin {
+  display: none;
+}
+.jsdares .editor-margin-icon {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  cursor: pointer;
+  z-index: 96;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.1s linear, right 0.1s linear;
+  -moz-transition: opacity 0.1s linear, right 0.1s linear;
+  -o-transition: opacity 0.1s linear, right 0.1s linear;
+  transition: opacity 0.1s linear, right 0.1s linear;
+}
+.jsdares .editor-margin-icon.editor-margin-icon-visible {
+  -webkit-transition: right 0.1s linear;
+  -moz-transition: right 0.1s linear;
+  -o-transition: right 0.1s linear;
+  transition: right 0.1s linear;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  right: 4px;
+}
+.jsdares .editor-margin-icon.editor-margin-icon-visible:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.jsdares .editor-margin-message-icon-error {
+  background-image: url("../img/margin-message-icon-error.png");
+}
+.jsdares .editor-margin-message-icon-inline {
+  background-image: url("../img/margin-message-icon-inline.png");
+  -webkit-transition: top 0.1s ease-in-out;
+  -moz-transition: top 0.1s ease-in-out;
+  -o-transition: top 0.1s ease-in-out;
+  transition: top 0.1s ease-in-out;
+}
+.jsdares .editor-margin-message-icon-preview {
+  background-image: url("../img/margin-message-icon-preview.png");
+}
+.jsdares .editor-top,
+.jsdares .editor-bottom,
+.jsdares .editor-step-bubbles {
+  position: absolute;
+  width: 480px;
+  margin-left: 1px;
+}
+.editor-typing .jsdares .editor-top,
+.editor-typing .jsdares .editor-bottom,
+.editor-typing .jsdares .editor-step-bubbles {
+  display: none;
+}
+.jsdares .editor-top {
+  z-index: 90;
+}
+.jsdares .editor-step-bubbles {
+  z-index: 80;
+}
+.jsdares .editor-bottom {
+  z-index: 60;
+}
+.jsdares .editor-marking {
+  position: absolute;
+  background-color: rgba(50, 250, 50, 0.4);
+  margin-top: -1px;
+  cursor: pointer;
+}
+.jsdares .editor-marking:hover,
+.jsdares .editor-marking.active {
+  background-color: rgba(50, 250, 50, 0.6);
+}
+.jsdares .editor-highlight {
+  cursor: crosshair;
+  background-color: #455445;
+}
+.jsdares .editor-highlight:hover {
+  background-color: #455445;
+}
+.jsdares .editor-highlight-function {
+  background-color: rgba(0, 100, 210, 0.2);
+}
+.jsdares .editor-highlight-function:hover {
+  background-color: rgba(0, 100, 210, 0.4);
+}
+.jsdares .editor-time-highlight {
+  position: absolute;
+  left: 7px;
+  width: 11px;
+  cursor: pointer;
+  background-color: rgba(0, 100, 210, 0.5);
+}
+.jsdares .editor-time-highlight.editor-time-highlight-hover {
+  background-color: rgba(0, 100, 210, 0.7);
+}
+.jsdares .editor-time-highlight.editor-time-highlight-active {
+  background-color: #0064d2;
+}
+.jsdares .editor-box {
+  position: absolute;
+  margin-top: 3px;
+  display: block;
+  background-color: rgba(10, 10, 10, 0.9);
+  font-size: 14px;
+  z-index: 100;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+}
+.jsdares .editor-box .editor-box-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(10, 10, 10, 0.9);
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -3px;
+}
+.jsdares .editor-box .editor-box-message {
+  padding: 5px 12px;
+  max-width: 250px;
+  color: #00ee00;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.jsdares .editor-box .editor-box-message var {
+  font-weight: bold;
+  font-style: normal;
+  color: #eeee00;
+}
+.jsdares .editor-number-editable,
+.jsdares .editor-number-editable-dragging {
+  cursor: col-resize !important;
+}
+.jsdares .editor-editable {
+  display: none;
+}
+.jsdares .editor-editable-show {
+  display: block;
+}
+.jsdares .editor-editable.active {
+  display: block;
+  background-color: rgba(50, 250, 50, 0.6);
+}
+.jsdares div.colorpicker div.circle.lightness {
+  border-color: rgba(10, 10, 10, 0.9);
+}
+.jsdares .editor-autocomplete-box {
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.9);
+  margin-top: 6px;
+  margin-left: -13px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(10, 10, 10, 0.9);
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -5px;
+  left: 10px;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-content {
+  min-width: 100px;
+  max-height: 140px;
+  margin: 8px 8px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-content .editor-autocomplete-line {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 1px 20px 0 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-content .editor-autocomplete-line.editor-autocomplete-selected {
+  background-color: #455445;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-content .editor-autocomplete-line strong {
+  color: #00dd00 !important;
+}
+.jsdares .editor-autocomplete-box .editor-autocomplete-hint {
+  font-size: 14px;
+  padding: 4px 9px 5px;
+  line-height: 14px;
+}
+.jsdares .editor-toolbar {
+  position: relative;
+  height: 40px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar {
+  display: none;
+  margin: 7px 10px;
+  z-index: 52;
+  min-width: 68px;
+}
+.jsdares .editor-toolbar.editor-toolbar-interactive .editor-toolbar-step-bar {
+  display: none;
+}
+.jsdares .editor-toolbar.editor-toolbar-interactive .editor-toolbar-run-bar {
+  display: inline-block;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar > button,
+.jsdares .editor-toolbar .editor-toolbar-run-bar > div {
+  vertical-align: top;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-reload {
+  background-image: -webkit-linear-gradient(top, #3db8f5, #0b62da);
+  background-size: 1px 55px;
+  background-position: 0px -29px;
+  padding: 4px 8px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-reload.editor-toolbar-reload-blink {
+  -animation-name: editor-toolbar-reload-blink-anim;
+  -animation-duration: 0.75s;
+  -animation-timing-function: linear;
+  -animation-iteration-count: infinite;
+  -animation-direction: alternate;
+  -webkit-animation-name: editor-toolbar-reload-blink-anim;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-name: editor-toolbar-reload-blink-anim;
+  -moz-animation-duration: 0.75s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -ms-animation-name: editor-toolbar-reload-blink-anim;
+  -ms-animation-duration: 0.75s;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-direction: alternate;
+  -o-animation-name: editor-toolbar-reload-blink-anim;
+  -o-animation-duration: 0.75s;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  -o-animation-direction: alternate;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-reload:hover {
+  -webkit-animation-name: none;
+  background-position: 0px -47px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-slider-container {
+  display: inline-block;
+  position: relative;
+  top: -10px;
+  left: -1px;
+  overflow: hidden;
+  padding-bottom: 12px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-slider-container .editor-toolbar-run-slider-button {
+  position: relative;
+  top: 10px;
+  padding: 0px;
+  height: 26px;
+  -webkit-transition: margin-left 0.2s linear;
+  -moz-transition: margin-left 0.2s linear;
+  -o-transition: margin-left 0.2s linear;
+  transition: margin-left 0.2s linear;
+  -moz-border-radius-topleft: 0px;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -moz-border-bottom-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-slider-container .editor-toolbar-run-slider-button .editor-toolbar-run-slider {
+  height: 5px;
+  margin: 2px 10px 0px;
+  padding: 10px 0px 3px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar.editor-toolbar-run-slider-enabled .editor-toolbar-run-playpause {
+  -moz-border-radius-topright: 0px;
+  -webkit-border-top-right-radius: 0px;
+  -moz-border-top-right-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -webkit-border-bottom-right-radius: 0px;
+  -moz-border-bottom-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar.editor-toolbar-run-slider-disabled .editor-toolbar-run-slider-container {
+  margin-left: -3px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar.editor-toolbar-run-slider-disabled .editor-toolbar-run-slider-container .editor-toolbar-run-slider-button {
+  border-left: none;
+  border-right: none;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-playpause-animation-container {
+  position: absolute;
+  left: 1px;
+  top: -1px;
+  width: 30px;
+  height: 28px;
+  overflow: hidden;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-playpause-animation-container .editor-toolbar-run-playpause-animation-block {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  height: 28px;
+  background-color: black;
+  opacity: 0.15;
+  filter: alpha(opacity=15);
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container {
+  position: absolute;
+  top: 26px;
+  width: 24px;
+  height: 24px;
+  margin-left: 2px;
+  line-height: 12px;
+  background-color: rgba(10, 10, 10, 0.9);
+  z-index: 100;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container .editor-toolbar-run-step-bar-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(10, 10, 10, 0.9);
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -4px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container .editor-toolbar-run-step-bar-icon {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container .editor-toolbar-run-step-bar-error-icon {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container .editor-toolbar-run-step-bar-error-icon:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container.editor-toolbar-run-step-bar-error {
+  width: 44px;
+  margin-left: -9px;
+}
+.jsdares .editor-toolbar .editor-toolbar-run-bar .editor-toolbar-run-step-bar-container.editor-toolbar-run-step-bar-error .editor-toolbar-run-step-bar-error-icon {
+  display: block;
+}
+@keyframes editor-toolbar-reload-blink-anim {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -12px;
+  }
+}
+@-webkit-keyframes editor-toolbar-reload-blink-anim {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -12px;
+  }
+}
+@-moz-keyframes editor-toolbar-reload-blink-anim {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -12px;
+  }
+}
+@-ms-keyframes editor-toolbar-reload-blink-anim {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -12px;
+  }
+}
+@-o-keyframes editor-toolbar-reload-blink-anim {
+  from {
+    background-position: 0px -29px;
+  }
+  to {
+    background-position: 0px -12px;
+  }
+}
+.jsdares .editor-stepbar {
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+}
+.jsdares .editor-stepbar .editor-stepbar-numbers {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.jsdares .editor-stepbar .editor-stepbar-numbers .editor-stepbar-step-number {
+  display: inline-block;
+  margin-right: 3px;
+  background-color: rgba(250, 250, 250, 0.2);
+  font-size: 10px;
+  width: 16px;
+  text-align: center;
+}
+.jsdares .editor-stepbar .editor-stepbar-numbers .editor-stepbar-step-number.editor-stepbar-step-number-hover {
+  background-color: rgba(250, 250, 250, 0.4);
+}
+.jsdares .editor-stepbar .editor-stepbar-numbers .editor-stepbar-step-number.editor-stepbar-step-number-locked {
+  background-color: rgba(250, 250, 250, 0.6);
+}
+.jsdares .editor-step-bubbles .editor-step-bubbles-container {
+  position: absolute;
+  top: 0px;
+}
+.jsdares .editor-step-bubbles .editor-step-bubbles-container .editor-step-bubbles-bubble {
+  position: absolute;
+  margin-top: 1px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 150, 255, 0.4);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.jsdares .editor-step-bubbles .editor-step-bubbles-container .editor-step-bubbles-bubble.editor-step-bubbles-bubble-active {
+  background-color: #0096ff;
+}
+.jsdares .editor-step-bubbles .editor-step-bubbles-line {
+  position: absolute;
+  top: 0px;
+  width: 0px;
+  margin-left: 4px;
+  border-left: 2px solid #1e5a84;
+}
+.jsdares .output {
+  position: relative;
+  background-color: #333333;
+  padding: 15px;
+  overflow: auto;
+}
+.jsdares .console-highlighting {
+  cursor: crosshair;
+}
+.jsdares .console-container {
+  background-color: #111111;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow: hidden;
+}
+.jsdares .console-autoscroll {
+  border-bottom: 1px solid #444444;
+}
+.jsdares .console-content {
+  padding: 10px;
+  position: relative;
+}
+.jsdares .console-line {
+  min-height: 16px;
+  border: none;
+  margin: 0px;
+  outline: none;
+  resize: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  display: none;
+}
+.jsdares .console-line-visible {
+  display: block;
+}
+.jsdares .console-line-highlight-time {
+  background-color: rgba(0, 110, 220, 0.3);
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  display: block;
+}
+.jsdares .console-line-highlight-time.console-line-visible {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.jsdares .console-highlighting-current-event .console-line-highlight-event,
+.jsdares .console-container:hover .console-line-highlight-event,
+.jsdares .console-line-highlight-time.console-line-highlight-event {
+  background-color: rgba(0, 110, 220, 0.5);
+}
+.jsdares .console-line-highlight-line,
+.jsdares .console-line-highlight-step {
+  background-color: #455445 !important;
+}
+.jsdares .console-target {
+  padding: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.jsdares .console-target .console-line {
+  display: block;
+}
+.jsdares .console-error {
+  opacity: 0.5;
+}
+.jsdares .canvas-highlighting {
+  cursor: crosshair;
+}
+.jsdares .canvas-container {
+  background-color: #dddddd;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 0px;
+  position: relative;
+}
+.jsdares .canvas-container .canvas-target {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.jsdares .canvas-error {
+  opacity: 0.5;
+}
+.jsdares .canvas-mirror {
+  background-color: #dddddd;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 1px 0px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 0px;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.jsdares .canvas-show-mirror .canvas-mirror {
+  position: relative;
+  visibility: visible;
+  width: 100%;
+  max-width: 540px;
+  background-color: #dddddd;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 0px 0px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 0px 0px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), inset 0px 0px 0px rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.jsdares .config .config-option-group {
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  margin: 10px 0px 0px;
+}
+.jsdares .config .config-option-group:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.jsdares .config .config-option-group .config-option-group-name {
+  font-weight: normal;
+  background-color: black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  vertical-align: text-bottom;
+  line-height: 18px;
+  background-color: #111;
+  padding: 3px 8px;
+  color: white;
+  white-space: nowrap;
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+}
+.jsdares .config .config-option-group .config-option-group-name .icon {
+  margin-top: 1px;
+}
+.jsdares .config .config-option-group .config-option {
+  padding: 3px 7px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.jsdares .config .config-option-group .config-option .config-option-value {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  background-color: #444;
+  padding: 2px 3px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+.jsdares .config .config-option-group .config-option .config-option-cell > span {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  font-size: 14px;
+}
+.jsdares .config .config-option-group .config-option .config-option-cell .config-option-cell-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid white;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin-right: 8px;
+}
+.jsdares .config .config-option-group .config-option .config-option-cell .config-option-cell-name {
+  width: 430px;
+  font-weight: bold;
+}
+.jsdares .config .config-option-group .config-option .config-option-cell .config-option-cell-name small {
+  font-size: smaller;
+  margin-left: 5px;
+  color: #777;
+  font-weight: lighter;
+}
+.jsdares .config .config-option-group .config-option:hover {
+  z-index: 11;
+  background-color: #555;
+  -webkit-box-shadow: 0px 0px 2px #2a2a2a;
+  -moz-box-shadow: 0px 0px 2px #2a2a2a;
+  box-shadow: 0px 0px 2px #2a2a2a;
+}
+.jsdares .config .config-option-group .config-option.config-option-active {
+  z-index: 12;
+  background-color: #555;
+  -webkit-box-shadow: 0px 0px 5px #2a2a2a;
+  -moz-box-shadow: 0px 0px 5px #2a2a2a;
+  box-shadow: 0px 0px 5px #2a2a2a;
+}
+.jsdares .config .config-option-group .config-option.config-option-active:hover {
+  background-color: #666;
+}
+.jsdares .config .config-option-group .config-option.config-option-active .config-option-cell-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.jsdares .config .config-option-group .config-option.config-option-highlight,
+.jsdares .config .config-option-group .config-option.config-option-highlight-step {
+  background-color: #455445 !important;
+}
+.jsdares .config .config-option-group .config-option .config-option-content {
+  overflow: auto;
+  z-index: 10;
+  padding: 5px 8px 0px;
+}
+.jsdares .config .config-option-group .config-option .config-option-content p {
+  overflow: hidden;
+}
+.jsdares .config .config-option-group .config-option .config-option-content code {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+}
+.jsdares .config .config-option-group .config-option .config-option-content dfn {
+  background-color: #111111;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.jsdares .config .config-option-group .config-option .config-option-content dfn samp {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  white-space: pre;
+}
+.jsdares .config .config-option-group .config-option .config-option-content dfn code {
+  float: right;
+  border-left: 1px solid #333;
+  min-width: 60%;
+}
+.jsdares .info .info-output {
+  font-weight: normal;
+  background-color: black;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  vertical-align: text-bottom;
+  line-height: 18px;
+  background-color: #111;
+  padding: 3px 8px;
+  color: white;
+  white-space: nowrap;
+}
+.jsdares .info .info-output .icon {
+  margin-top: 1px;
+}
+.jsdares .info .info-scope-container {
+  border-bottom: 1px solid #555;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+.jsdares .info .info-scope-container .info-scope {
+  background-color: #111111;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item {
+  padding: 5px 7px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-cell > span {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  font-size: 14px;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-cell .info-scope-cell-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #00dd00;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin-right: 7px;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-content {
+  border-left: 1px dotted #00dd00;
+  margin-left: 1px;
+  padding-left: 10px;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-content .info-scope-variable {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-content .info-scope-variable-highlight,
+.jsdares .info .info-scope-container .info-scope .info-scope-item .info-scope-content .info-scope-variable-highlight-step {
+  background-color: #455445;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item:hover {
+  background-color: #222;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item.info-scope-item-active .info-scope-cell-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item.info-scope-item-disabled {
+  color: #007700;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item.info-scope-item-disabled .info-scope-content {
+  border-left-color: #007700;
+}
+.jsdares .info .info-scope-container .info-scope .info-scope-item.info-scope-item-disabled .info-scope-cell-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #007700;
+}
+.jsdares .info .info-tables .info-table {
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  margin: 10px 0px 0px;
+}
+.jsdares .info .info-tables .info-table:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.jsdares .info .info-tables .info-table > p {
+  padding: 0px 2px;
+}
+.jsdares .info .info-tables .info-table .info-table-item {
+  padding: 3px 7px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-cell > span {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  font-size: 14px;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-cell .info-table-cell-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -4px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid white;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  margin-right: 8px;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-cell .info-table-cell-name {
+  width: 430px;
+  font-weight: bold;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-cell .info-table-cell-name small {
+  font-size: smaller;
+  margin-left: 5px;
+  color: #777;
+  font-weight: lighter;
+}
+.jsdares .info .info-tables .info-table .info-table-item:hover {
+  z-index: 11;
+  background-color: #555;
+  -webkit-box-shadow: 0px 0px 2px #2a2a2a;
+  -moz-box-shadow: 0px 0px 2px #2a2a2a;
+  box-shadow: 0px 0px 2px #2a2a2a;
+}
+.jsdares .info .info-tables .info-table .info-table-item.info-table-item-active {
+  z-index: 12;
+  background-color: #555;
+  -webkit-box-shadow: 0px 0px 5px #2a2a2a;
+  -moz-box-shadow: 0px 0px 5px #2a2a2a;
+  box-shadow: 0px 0px 5px #2a2a2a;
+}
+.jsdares .info .info-tables .info-table .info-table-item.info-table-item-active:hover {
+  background-color: #666;
+}
+.jsdares .info .info-tables .info-table .info-table-item.info-table-item-active .info-table-cell-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.jsdares .info .info-tables .info-table .info-table-item.info-table-item-highlight,
+.jsdares .info .info-tables .info-table .info-table-item.info-table-item-highlight-step {
+  background-color: #455445 !important;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content {
+  overflow: auto;
+  z-index: 10;
+  padding: 5px 8px 0px;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content p {
+  overflow: hidden;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content code {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre;
+  padding: 5px 10px;
+  border: none;
+  background: none;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content dfn {
+  background-color: #111111;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content dfn samp {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  white-space: pre;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content dfn code {
+  float: right;
+  border-left: 1px solid #333;
+  min-width: 60%;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content .info-table-content-wrapper {
+  overflow: auto;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content .info-table-content-wrapper .info-table-content-container {
+  width: 130px;
+  float: left;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content .info-table-content-wrapper dfn {
+  width: auto;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content .info-table-content-wrapper > code {
+  background-color: #111111;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 1px rgba(130, 130, 130, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  float: left;
+}
+.jsdares .info .info-tables .info-table .info-table-item .info-table-content .info-table-content-clickable {
+  cursor: default;
+}
+.jsdares .modal-open {
+  overflow: hidden;
+}
+.jsdares .ui-main {
+  color: #fbfbfb;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: lighter;
+  position: relative;
+  width: 1085px;
+  height: 605px;
+}
+.jsdares .ui-main li {
+  line-height: 24px;
+}
+.jsdares .ui-main strong {
+  color: white;
+}
+.jsdares .ui-background {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 1085px;
+  height: 565px;
+  background-color: #333;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.jsdares .ui-editor {
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 542px;
+  height: 545px;
+}
+.jsdares .ui-output {
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  width: 543px;
+  height: 572px;
+  -webkit-transition: bottom 0.5s ease-in-out;
+  -moz-transition: bottom 0.5s ease-in-out;
+  -o-transition: bottom 0.5s ease-in-out;
+  transition: bottom 0.5s ease-in-out;
+}
+.jsdares .ui-output .nav-tabs {
+  border-bottom: none;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.jsdares .ui-output .nav-tabs li {
+  position: relative;
+  top: 35px;
+  -webkit-transition: top 0.5s ease-out;
+  -moz-transition: top 0.5s ease-out;
+  -o-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+}
+.jsdares .ui-output .nav-tabs li.tab-button-enabled {
+  top: 0px;
+}
+.jsdares .ui-output .nav-tabs li > a {
+  padding: 6px 10px 3px;
+  margin-right: 4px;
+  line-height: 18px;
+  font-size: 13px;
+  color: white;
+  border: none;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #2c2c2c;
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(to bottom, #333333, #222222);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff222222', GradientType=0);
+  border-color: #222222 #222222 #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #222222;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-color: #222;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.jsdares .ui-output .nav-tabs li > a:hover,
+.jsdares .ui-output .nav-tabs li > a:active,
+.jsdares .ui-output .nav-tabs li > a.active,
+.jsdares .ui-output .nav-tabs li > a.disabled,
+.jsdares .ui-output .nav-tabs li > a[disabled] {
+  color: #ffffff;
+  background-color: #222222;
+  *background-color: #151515;
+}
+.jsdares .ui-output .nav-tabs li > a:active,
+.jsdares .ui-output .nav-tabs li > a.active {
+  background-color: #080808 \9;
+}
+.jsdares .ui-output .nav-tabs li > a:hover,
+.jsdares .ui-output .nav-tabs li > a:focus {
+  color: white;
+  border: none;
+  background-color: #222;
+  background-position: 0 -30px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.jsdares .ui-output .nav-tabs .active > a {
+  background-position: 0 0px !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #474747;
+  background-image: -moz-linear-gradient(top, #555555, #333333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#333333));
+  background-image: -webkit-linear-gradient(top, #555555, #333333);
+  background-image: -o-linear-gradient(top, #555555, #333333);
+  background-image: linear-gradient(to bottom, #555555, #333333);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff333333', GradientType=0);
+  border-color: #333333 #333333 #0d0d0d;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #333333;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-color: #333;
+}
+.jsdares .ui-output .nav-tabs .active > a:hover,
+.jsdares .ui-output .nav-tabs .active > a:active,
+.jsdares .ui-output .nav-tabs .active > a.active,
+.jsdares .ui-output .nav-tabs .active > a.disabled,
+.jsdares .ui-output .nav-tabs .active > a[disabled] {
+  color: #ffffff;
+  background-color: #333333;
+  *background-color: #262626;
+}
+.jsdares .ui-output .nav-tabs .active > a:active,
+.jsdares .ui-output .nav-tabs .active > a.active {
+  background-color: #1a1a1a \9;
+}
+.jsdares .ui-output .tab-output {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  overflow: auto;
+}
+.jsdares .ui-output .tab-content {
+  display: block;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 27px;
+  bottom: 0px;
+  width: auto;
+  height: auto;
+  background-color: #333;
+  z-index: 3;
+}
+.jsdares .ui-output var {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  font-style: normal;
+  font-weight: bold;
+  background-color: #444;
+  padding: 2px 3px 1px;
+  -webkit-font-smoothing: antialiased;
+}
+.jsdares .ui-toolbar {
+  position: absolute;
+  top: 0px;
+  left: 569px;
+  background-color: #333;
+  margin: 0;
+  z-index: 51;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+.jsdares .ui-stepbar {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 1085px;
+  height: 19px;
+  background-color: #333;
+  border-top: solid 1px #444444;
+  z-index: 4;
+}
+.jsdares .ui-close {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: 0px;
+  background-color: #333;
+  padding: 5px 0;
+  color: #CCC;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  z-index: 52;
+  width: 40px;
+  height: 24px;
+  text-align: center;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+.jsdares .ui-close:hover {
+  color: white;
+  text-decoration: none;
+}
+.jsdares .btn-warning .caret {
+  border-top-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+.jsdares .ui-home {
+  padding: 15px;
+}
+.jsdares .ui-home a {
+  color: #5be;
+}
+.jsdares .ui-home div {
+  margin-top: 10px;
+}
+.jsdares .ui-home h3 {
+  border-top: 1px solid #555;
+  margin: 15px 0px 10px;
+  padding-top: 15px;
+}
+.jsdares .ui-modal {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 1050;
+}
+.jsdares .ui-modal.ui-modal-active {
+  display: block;
+}
+.jsdares .ui-modal .ui-modal-ui {
+  position: absolute;
+  left: 50%;
+  top: -50%;
+  margin-left: -543px;
+  margin-top: -303px;
+  -webkit-transition: top 0.25s ease-in-out;
+  -moz-transition: top 0.25s ease-in-out;
+  -o-transition: top 0.25s ease-in-out;
+  transition: top 0.25s ease-in-out;
+}
+.jsdares .ui-modal .ui-modal-ui.ui-modal-ui-active {
+  top: 50%;
+}
+.jsdares .ui-modal .ui-modal-ui::before,
+.jsdares .ui-modal .ui-modal-ui::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  width: 300px;
+  max-width: 300px;
+  max-height: 100px;
+  height: 100px;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg);
+}
+.jsdares .ui-modal .ui-modal-ui::after {
+  left: auto;
+  right: 20px;
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg);
+}
+.editor-mirror {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+  color: #00dd00;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  position: absolute;
+  border: none;
+  margin: 0px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+  white-space: pre;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+.editor-mirror-container {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
